@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../src/assets/screen2.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+  <div class="row align-item-center">
+    <div class="col-2"><img src="../src/assets/images/Logo.png" class="img-1"></div>
+
+    <div class="col-lg-8 col-lg-5 ">
+
+      <br>
+
+
+      <h1 class="classCentr"> Registration</h1>
+
+    </div>
+
+    <div class="col-2"></div>
+
+  </div>
+</div>
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-sm-11 col-lg-4">
+        <h4 class="classCentr">Personal<p> information</h4>
+
+
+        <div class="total-group">
+          <label for="inputFullName">Full name</label>
+          <input type="text"
+                 class="form-control"
+                 id="inputFullName"
+                 placeholder="Full name"></div>
+
+        <div class="total-group">
+          <label for="inputSecondName">Second name</label>
+          <input type="text" class="form-control" id="inputSecondName" placeholder="Second name"></div>
+        <div class="total-group">
+          <label for="inputPelefonNumber">Phone Number</label>
+          <input type="text" class="form-control" id="inputPelefonNumber" placeholder="Phone Number"></div>
+
+        <div class="total-group">
+          <label for="inputConfession">Confession</label>
+          <select id="inputConfession" class="form-control">
+
+            <option>Non</option>
+            <option>Judaism</option>
+            <option>Christianity</option>
+            <option>Islam</option>
+            <option>Budist</option>
+          </select>
+        </div>
+
+        <div class="total-group">
+          <label for="inputDate">Data of Birth</label>
+          <input type="date" class="form-control" id="inputDate" placeholder="Data of Birth">
+        </div>
+
+      </div>
+
+
+      <div class="col-sm-11 col-lg-4">
+
+        <h4 class="classCentr">About<p> myself</h4>
+
+        <div class="total-group"><label for="inputMaritalStatus">Marital status</label>
+          <select id="inputMaritalStatus" class="form-control">
+            <option>Married</option>
+            <option>unmarried</option>
+            <option>divorced</option>
+            <option>widow</option>
+          </select></div>
+
+        <div class="total-group">
+          <label for="inputFoodPrefences">Food Preferences</label>
+          <select id="inputFoodPrefences" class="form-control">
+            <option>Any</option>
+            <option>Vegetarian</option>
+            <option></option>
+          </select></div>
+
+        <div class="row">
+          <div class=container>
+            <label for="inputAllergy">Allergy</label>
+
+            <textarea class=container rows="4" id="inputAllergy" placeholder="Allergy"></textarea>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-sm-11 col-lg-4">
+        <div class="classCentr">
+
+          <button><img src="../src/assets/images/avatar-male.png" class="img"></button>
+        </div>
+
+        <h3 class="classCentr">Change picture</h3>
+
+
+        <div class="row">
+          <div class=container>
+            <label for="inputhobbies">
+              <div class="text" id="text">
+                <p> Few words about yourself , hobbies
+                  and how do you spend your free time</p>
+
+
+              </div>
+            </label>
+
+            <textarea class=container rows="4" id="inputhobbies" placeholder="Type Hobbies"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="positionbtn">
+    <button type="submit" class="btn_save">Save</button>
+  </div>
+
+</div>
+</body>
+</html>

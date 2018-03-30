@@ -1,0 +1,15 @@
+body {
+    background-color: #5F4F8D;
+}
+
+.marginZero {
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+.fontMargin {
+    font-size: 30px;
+    margin-bottom: 20px;
+}

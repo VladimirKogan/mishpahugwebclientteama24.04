@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('mishpahug-web-client App', () => {
+describe('mishpahugproject App', () => {
   let page: AppPage;
 
   beforeEach(() => {

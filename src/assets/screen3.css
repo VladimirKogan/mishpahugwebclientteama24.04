@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-size: 100%;
+    background: #5F4F8D;
+}
+
+.alignGorisontal {
+    text-align: center;
+}
+
+.alignVertical {
+    align-items: center;
+}
+.adaptive-picture{
+    max-width: 100%;
+    height: auto;
+}
+
+#closeButton {
+    all: initial;
+    height: 48px;
+    width: 48px;
+    background-image: url("ic_cancel_white_24dp_2x.png");
+}

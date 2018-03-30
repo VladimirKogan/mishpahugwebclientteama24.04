@@ -1,0 +1,54 @@
+body, .btn {
+    background-color: #5F4F8D;
+}
+
+.center, .marginZero{
+    margin: 0 auto;
+}
+
+.fontMargin{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.list-group-item {
+    background: linear-gradient(#FFEED9, white)
+}
+
+.tabs {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.nav-link, .card-title-img {
+    color: white;
+}
+
+#onImg {
+    position: absolute;
+    bottom: 0;
+    background: rgba(95, 79, 141, 0.7);
+    left: 0;
+    right: 0;
+}
+
+.margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.padding {
+    padding: 0;
+}
+
+.card-body{
+    display:flex;
+    align-items:center; /* vertically aligned! */
+    justify-content: center;
+}

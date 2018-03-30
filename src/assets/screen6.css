@@ -1,0 +1,125 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: #5F4F8D !important;
+}
+.closeRow{
+    height: 7.5vmin;
+    margin: 0px;
+}
+.container{
+    background-color: #FFEED9;
+    padding: 0px;
+}
+.infoBox{
+    padding: 0px;
+}
+.pictureBox{
+    height: 40vh;
+    background-color: red;
+}
+.title{
+text-align: center;
+    font-size: 3vh;
+}
+.rateBox{
+
+    padding: 0px;
+    margin: 0px;
+}
+.rateImg{
+    height: 4vmin;
+    width: 15vmax;
+}
+.vote{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.rateNumber{
+    font-size: 1.8vh;
+    font-weight: bold;
+    padding-top: 1vmin;
+    margin: 0px;
+}
+.dateBox{
+
+}
+.date{
+
+    font-size: 2vmin;
+    font-weight: bold;
+    margin-top: 0.5vmin;
+    text-align: center;
+}
+.dataText{
+    font-size: 2vh;
+    padding-right: 0px;
+    text-align: center;
+}
+.descriptionBox{
+
+}
+.description{
+    font-size: 2vh;
+}
+.buttonBox{
+
+}
+.btn{
+
+    font-size: 1.8vh;
+}
+.paddings{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+    /*Place*/
+.placeImg{
+    height: 2vh;
+    width: 2vh;
+    margin-bottom: 0.5vmin;
+}
+.placeText{
+    font-size: 2vh;
+    padding: 0px;
+    margin-top: 0.2vmin;
+}
+.placeBox{
+    padding-right: 0px;
+}
+
+    /*Clock*/
+.clockImg{
+    height: 3vh;
+    width: 3vh;
+    margin-top: 0.5vmin;
+}
+.clock{
+    border-radius: 3vh;
+}
+.clockText{
+    font-size: 2vh;
+    font-weight: bold;
+    padding-left: 1vmax;
+    padding-right: 1.5vmax;
+    margin-top: 5px;
+
+}
+
+    /*Close*/
+.closeBox{
+    margin-top: 2vmin;
+}
+.closeImg{
+    height: 2vmax;
+    width: 2vmax;
+}
+.closeText{
+    font-size: 1.5vmax;
+    font-weight: bold;
+    padding-left: 0.5vmax;
+    padding-right: 1.5vmax;
+    margin-top: 0.2vmin;
+    color: white !important;
+}

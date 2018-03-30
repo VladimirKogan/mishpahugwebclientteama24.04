@@ -1,0 +1,186 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: #5F4F8D !important;
+}
+
+/*AppComponent*/
+
+.nav-item a{
+    color: #FFEED9;
+    font-size: x-large;
+}
+.navBox{
+    padding: 0px;
+}
+.row-app{
+    padding-bottom: 2%;
+}
+.events{
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+    margin: 0px;
+    padding: 1vmax;
+}
+.tab-content{
+    height: 80vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.active{
+    background-color: #FFEED9 !important;
+}
+
+
+
+
+::-webkit-scrollbar{
+    width: 0.7vw;
+}
+::-webkit-scrollbar-button:start{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #4285F4;
+}
+::-webkit-scrollbar-button:end{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #4285F4;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #F5F5F5;
+    border-left: 2px #4285F4;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #4285F4;
+    border-left: 2px #4285F4;
+    height: 20px;
+}
+::-webkit-scrollbar-track{
+    border-width: 0;
+}
+
+/*Event*/
+
+.title {
+    font-weight: bold;
+}
+.date{
+    text-align: right;
+}
+.color{
+    background-color: #FFEED9; !important;
+}
+.btn {
+    top: 1.8vmin;
+    height: 5%;
+    font-size: small;
+}
+.card{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*ListOfInvited*/
+
+.peopleBox{
+    padding-bottom: 1vh;
+}
+.invitedBox{
+    background-color: rgba(255,238,217,0.2);
+    margin: 0px;
+    padding-bottom: 1vh;
+}
+.list-group{
+    /*height: 24vmin;*/
+    height: 24vh;
+    overflow: auto;
+}
+.info{
+    height: 80%;
+}
+.title{
+    font-size: large;
+    padding-top: 1vh;
+}
+.field{
+    text-align: center;
+    padding-top: 1vmin;
+    padding-left: 1vmax;
+    font-size: small;
+    margin: 0.5vmin;
+}
+
+.paddRight{
+    padding-right: 0px;
+}
+.imgBox{
+    padding-top: 2vmin;
+    padding-left: 3vmax;
+}
+.avatar{
+    height: 12vmin;
+    width: 8vmax;
+}
+.rate{
+    height: 1.5vmin;
+    width: 8vmax;
+}
+.fieldPhone{
+    font-size: small;
+    padding-top: 1vmin;
+    margin: 0.5vmin;
+}
+.dataSecond{
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+.color{
+    background: #FFEED9;
+}
+.iconClose{
+    height: 2vmin;
+    width: 2vmax;
+}
+.closeText{
+    height: 2vmin;
+    font-size: small;
+}
+.closeBox{
+    padding-top: 1vmin;
+    padding-left: 1vmax;
+}
+.alignCenter{
+    text-align: center;
+}
+.paddOneLR{
+    padding-left: 1vmax;
+    padding-right: 1vmax;
+    text-align: center;
+}
+.list-group-item{
+    color: black;
+}
+
+.noneDecor{
+    text-decoration: none !important;
+}
+
+.marginTop{
+    margin-top: 1vh;
+}
+.paddZero{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+

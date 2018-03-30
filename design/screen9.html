@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Events Pending</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../src/assets/screen9.css">
+</head>
+<body>
+
+<div class="row-app">
+  <div class="navBox col-xl-12">
+    <ul class="nav nav-tabs nav-justified">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+        <li class="nav-item"><a href="#" class="nav-link text-uppercase">Inprogress</a></li>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+        <li class="nav-item"><a href="#" class="nav-link text-uppercase active">Pending</a></li>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+        <li class="nav-item"><a href="#" class="nav-link text-uppercase">Done</a>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+<div class="events scrollbar col-xl-12">
+  <div class="tab-content col-xl-12 ">
+    <div class="container col-xl-12">
+      <div class="card color col-xl-12">
+        <div class="row">
+          <span id="title" class="card-header paddZero col-xl-10 col-md-9  col-sm-6 col-4 title"></span>
+          <span id="data" class="card-header paddZero col-xl-2 col-md-3 col-sm-6 col-8 date"></span>
+        </div>
+        <div class="row">
+          <span id="description" class="card-body col-xl-12 col-md-12 col-sm-12"><p></p></span>
+          <span id="subscribedPeople"
+                class="card-body paddRight countofpeople col-xl-2 col-md-2 col-sm-3 col-5"><p></p></span>
+          <button class="btn btn-primary col-xl-2 col-md-3 col-sm-4 col-6">Show invited people</button>
+        </div>
+      </div>
+      <div class="list-invited">
+        <div class="invitedBox row col-xl-12 col-md-12 col-sm-12 col-12">
+          <div class="buffer col-xl-2 col-lg-2 "></div>
+          <h1 class="title col-xl-10 col-lg-10 col-md-12">INVITED</h1>
+          <div class="buffer row col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+
+          <ul class="peopleBox list-group scrollbar marginTop col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Jane Doe</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Joe Doe</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Moshe Kaplan</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Johny Walker</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Nick Smith</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Jane Walker</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Johny Walker</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Nick Smith</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Jane Walker</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Johny Walker</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Nick Smith</li>
+            </a>
+            <a class="noneDecor" href="">
+              <li class="list-group-item color">Jane Walker</li>
+            </a>
+          </ul>
+
+          <div class="buffer row col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+          <div class="cardInfo color card marginTop col-xl-4 col-lg-5 col-md-11 col-sm-11 col-12">
+            <div class="cardInfo row">
+              <div
+                class="row cardInfo closeBox d-flex flex-row justify-content-end paddRight col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <img class="iconClose" src="../src/assets/icons/ic_cancel_white_18dp_1x.png" alt="close">
+                <div class="closeText alignCenter">close</div>
+              </div>
+              <div class="paddOneLR col-xl-6 col-lg-6 col-md-6 col-sm-6 col-10">
+                <div class="cardInfo imgBox">
+                  <div><img class="avatar" src="../src/assets/images/avatar-male.png" alt="photo"></div>
+
+                  <div><img class="rate" src="../src/assets/images/oneStar.png" alt="rate"></div>
+
+                  <h1 class="fieldPhone alignCenter">0123456789</h1>
+                </div>
+              </div>
+              <div class="cardInfo paddRight col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="row">
+                  <div class="paddOneLR col-xl-7 col-lg-7 col-md-7 col-sm-8 col-10">
+                    <h1 class="field">Jane Doe</h1>
+                    <h1 class="field">Catholic</h1>
+                    <h1 class="field">Female</h1>
+                    <h1 class="field">Married</h1>
+                    <h1 class="field">None</h1>
+                    <h1 class="field">Asian</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buffer row col-xl-2 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container col-xl-12">
+      <div class="card color col-xl-12">
+        <div class="row">
+          <span class="card-header col-xl-10 col-md-9  col-sm-6 col-6 title">Shabat</span>
+          <span class="card-header col-xl-2 col-md-3 col-sm-6 col-6 date">2018-01-04 19.00</span>
+        </div>
+        <div class="row">
+                        <span class="card-body col-xl-12 col-md-12 col-sm-12">
+                            <p>Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content.
+                                Display initial content in context to the user.
+                                Enable the user to flow through more information as needed.
+                                Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content. Display initial content in context to the user.
+                                Enable the user to flow through more information as needed.Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content.</p></span>
+          <span class="card-body countofpeople col-xl-2 col-md-2 col-sm-3 col-5"><p>Will go: 6</p></span>
+          <button class="btn btn-primary col-xl-2 col-md-3 col-sm-4 col-6" (click)="showInvited()">Show
+            invited people
+          </button>
+        </div>
+      </div>
+      <!--<app-list-invited [event]="event" *ngIf="show"></app-list-invited>-->
+    </div>
+    <div class="container col-xl-12">
+      <div class="card color col-xl-12">
+        <div class="row">
+          <span class="card-header col-xl-10 col-md-9  col-sm-6 col-6 title">Shabat</span>
+          <span class="card-header col-xl-2 col-md-3 col-sm-6 col-6 date">2018-01-04 19.00</span>
+        </div>
+        <div class="row">
+                        <span class="card-body col-xl-12 col-md-12 col-sm-12">
+                            <p>Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content.
+                                Display initial content in context to the user.
+                                Enable the user to flow through more information as needed.
+                                Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content. Display initial content in context to the user.
+                                Enable the user to flow through more information as needed.Tabs can be used to contain a variety of content & elements.
+                                They are a good way to group relevant content.</p></span>
+          <span class="card-body countofpeople col-xl-2 col-md-2 col-sm-3 col-5"><p>Will go: 6</p></span>
+          <button class="btn btn-primary col-xl-2 col-md-3 col-sm-4 col-6" (click)="showInvited()">Show
+            invited people
+          </button>
+        </div>
+      </div>
+      <!--<app-list-invited [event]="event" *ngIf="show"></app-list-invited>-->
+    </div>
+    <div class="container col-xl-12">
+      <div class="card color col-xl-12">
+        <div class="row">
+          <span class="card-header col-xl-10 col-md-9  col-sm-6 col-6 title">Shabat</span>
+          <span class="card-header col-xl-2 col-md-3 col-sm-6 col-6 date">2018-01-04 19.00</span>
+        </div>
+        <div class="row">
+          <span class="card-body col-xl-12 col-md-12 col-sm-12"><p>Tabs can be used to contain a
+            variety of content & elements. They are a good way to group relevant content. Display
+            initial content in context to the user. Enable the user to flow through more
+            information as needed.Tabs can be used to contain a variety of content & elements.
+            They are a good way to group relevant content. Display initial content in context to
+            the user. Enable the user to flow through more information as needed.Tabs can be used
+            to contain a variety of content & elements. They are a good way to group relevant
+            content.</p></span>
+          <span class="card-body countofpeople col-xl-2 col-md-2 col-sm-3 col-5"><p>Will go: 6</p></span>
+          <button class="btn btn-primary col-xl-2 col-md-3 col-sm-4 col-6" (click)="showInvited()">Show
+            invited people
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  event = {
+    title: 'Shabat',
+    date: '2018-01-04 19.00',
+    people: [{
+      fullName: 'Joe Doe',
+      phone: '0123456789',
+      confession: 'Catholic',
+      gender: 'Male',
+      martialStatus: 'Married',
+      allergy: 'sugar',
+      foodPreferences: 'Asian'
+    }, {
+      fullName: 'Jane Doe',
+      phone: '87746546546',
+      confession: 'Ateist',
+      gender: 'Male',
+      martialStatus: 'fsdsd',
+      allergy: 'bread',
+      foodPreferences: 'Vegetarian'
+    },
+      {
+        fullName: 'Moshe Kaplan',
+        phone: '87746546546',
+        confession: 'Judaism',
+        gender: 'Male',
+        martialStatus: 'fsdsd',
+        allergy: 'been',
+        foodPreferences: 'Kosher'
+      },
+      {
+        fullName: 'Johny Walker',
+        phone: '87746546546',
+        confession: 'Ateism',
+        gender: 'Male',
+        martialStatus: 'fsdsd',
+        allergy: 'none',
+        foodPreferences: 'Asian'
+      },
+      {
+        fullName: 'Nick Smith',
+        phone: '87746546546',
+        confession: 'Judaism',
+        gender: 'Male',
+        martialStatus: 'fsdsd',
+        allergy: 'bread',
+        foodPreferences: 'None'
+      },
+      {
+        fullName: 'Jane Walker',
+        phone: '87746546546',
+        confession: 'Catholic',
+        gender: 'Male',
+        martialStatus: 'fsdsd',
+        allergy: 'none',
+        foodPreferences: 'Vegetarian'
+      }],
+    description: 'Tabs can be used to contain a variety of content & elements.' +
+    ' They are a good way to group relevant content. Display initial content in context to the user.' +
+    ' Enable the user to flow through more information as needed.' +
+    'Tabs can be used to contain a variety of content & elements. They are a good way to group relevant content.' +
+    ' Display initial content in context to the user. Enable the user to flow through more information as needed.' +
+    'Tabs can be used to contain a variety of content & elements. They are a good way to group relevant content. ',
+    subscribed: '4'
+  };
+
+
+  var title = document.getElementById("title");
+  var data = document.getElementById("data");
+  var description = document.getElementById("description");
+  var subscribedPeople = document.getElementById("subscribedPeople");
+  title.innerText = event.title;
+  data.innerText = event.date;
+  description.innerText = event.description;
+  subscribedPeople.innerText = "Will go: " + event.subscribed;
+</script>
+
+</body>
+</html>

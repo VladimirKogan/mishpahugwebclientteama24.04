@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../src/assets/screen7.css">
+</head>
+<body>
+<br>
+<div class="container">
+  <div class="row alignVertical">
+    <div class="col-10 col-lg-1 order-1 order-lg-1">
+      <img src="../src/assets/images/Logo.png" class="img-responsive">
+    </div>
+    <div class="col-12 col-lg-10 order-3 order-lg-2">
+      <h1 class="alignGorisontal">Profile</h1>
+    </div>
+    <div class="col-2 col-lg-1 order-2 order-lg-3">
+      <button id="closeButton"></button>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="alignGorisontal">
+  <button class="btn btn-primary ">Change</button>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="row">
+          <div class="col-sm-12 col-lg-4">
+            <h4 class="alignGorisontal">Personal information</h4>
+            <div class="form-group">
+              <label for="inputFirstName">First name</label>
+              <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label for="inputLastName">Last name</label>
+              <input type="text" class="form-control" id="inputLastName" placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <label for="inputPhoneNumber">Phone number</label>
+              <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone number">
+            </div>
+            <div class="form-group">
+              <label for="inputConfession">Confession</label>
+              <select id="inputConfession" class="form-control">
+                <option selected>None</option>
+                <option>Judaism</option>
+                <option>Christianity</option>
+                <option>Islam</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputGender">Gender</label>
+              <select id="inputGender" class="form-control">
+                <option selected>None</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <h4 class="alignGorisontal">About myself</h4>
+            <div class="form-group">
+              <label for="inputMaritalStatus">Marital status</label>
+              <select id="inputMaritalStatus" class="form-control">
+                <option selected>Unmarried</option>
+                <option>Married</option>
+                <option>Divorced</option>
+                <option>Widowed</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputFoodPreferences">Food preferences</label>
+              <select id="inputFoodPreferences" class="form-control">
+                <option selected>Any</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+              </select>
+            </div>
+            <div class="row">
+              <div class="form-group col">
+                <label for="inputAllergy">Allergy</label>
+                <textarea class="form-control" rows="4" id="inputAllergy"
+                          placeholder="Allergy"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <div class="alignGorisontal">
+              <img src="../src/assets/images/avatar-male.png" class="img-responsive rounded-circle">
+            </div>
+            <h3 class="text-center">Change picture</h3>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="alignGorisontal">
+          <button type="submit" class="btn btn-primary ">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

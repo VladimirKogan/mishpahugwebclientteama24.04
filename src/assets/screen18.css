@@ -1,0 +1,58 @@
+body{
+    background-color: #5F4F8D;
+}
+label, .white{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+.container-fluid{
+    margin-top: 2vh;
+}
+.form-group{
+    margin-top: 2vh;
+}
+.cont{
+    flex-direction: column;
+}
+.btn{
+    font-weight: bold;
+    font-size: larger;
+}
+.form-control{
+    background-color: blanchedalmond;
+}
+img{
+    height: 4vmin;
+    width: 4vmax;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dt{
+    margin-top: 3vh;
+    text-align: center;
+}
+.whiteClose{
+    color: blanchedalmond;
+    font-weight: bold;
+    font-size: large;
+}
+.closeBtn{
+    background-color: blanchedalmond;
+    width: 2vmax;
+    height: 2vmax;
+    border-radius: 2vmax;
+}
+
+#dataText, #timeText{
+    text-align: left;
+}
+.calendar{
+    width: 2vmax;
+}
