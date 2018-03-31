@@ -1,21 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { AlertModule } from 'ngx-bootstrap';
-
-import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
+import {MaterialModule} from './shared/modules/material/material.module';
+import {AuthModule} from './auth/auth.module';
+import {LayoutModule} from './layout/layout.module';
+import {AppRoutingModule} from './app-routing.module';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, BsDropdownModule.forRoot(), AlertModule.forRoot(),
-    MatToolbarModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    AuthModule,
+    LayoutModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
