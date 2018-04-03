@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-event-list-page',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventListPageComponent implements OnInit {
 
-  constructor() { }
+  events = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  rowsQuantity = this.getRowsQuantity(this.events.length);
+
+  private getRowsQuantity(length) {
+    return length % 4 === 0 ? length / 4 : length / 4 + 1;
+  }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
