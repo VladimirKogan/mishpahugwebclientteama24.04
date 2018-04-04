@@ -1,34 +1,42 @@
-<div class="container">
-  <br>
-  <div class="row">
-    <div class="col-12">
-      <h1 class="gorisontal-center">Event list</h1>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Event list</title>
+</head>
+<div class="bc-color">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="gorisontal-center">Event list</h1>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-12">
-      <button mat-raised-button>Filters</button>
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <button mat-raised-button>Filters</button>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let event of events">
-      <mat-card class="event-list-card">
-        <img mat-card-image src="../../../assets/images/banner.png">
-        <mat-card-content>
-          <p class="gorisontal-center">Goldberg family {{event}}</p>
-          <img class="img-stars" src="../../../assets/images/oneStar.png"/>
-          <br>
-          <p class="gorisontal-center">Tel-aviv</p>
-          <p class="gorisontal-center">Shabbat</p>
-          <p class="gorisontal-center">2018-03-01 / 18:00</p>
-        </mat-card-content>
-        <mat-card-actions class="gorisontal-center">
-          <button mat-button color="primary" (click)="goToEvent()">JOIN</button>
-          <button mat-button>VOTE</button>
-        </mat-card-actions>
-      </mat-card>
+    <br>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let event of events">
+        <mat-card class="event-list-card">
+          <img mat-card-image src="../../../assets/images/banner.png">
+          <mat-card-content>
+            <p class="gorisontal-center">Goldberg family {{event}}</p>
+            <img class="img-stars" src="../../../assets/images/oneStar.png"/>
+            <br>
+            <p class="gorisontal-center">Tel-aviv</p>
+            <p class="gorisontal-center">Shabbat</p>
+            <p class="gorisontal-center">2018-03-01 / 18:00</p>
+          </mat-card-content>
+          <mat-card-actions class="gorisontal-center">
+            <button mat-button color="primary" (click)="goToEvent()">JOIN</button>
+            <button mat-button>VOTE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
