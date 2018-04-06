@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import {ServerService} from './shared/services/server.service';
 import {HttpClientModule} from '@angular/common/http';
+import {DataService} from './shared/services/data.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ServerService],
+  providers: [ServerService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
