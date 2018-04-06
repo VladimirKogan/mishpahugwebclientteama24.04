@@ -8,22 +8,25 @@ import {AuthModule} from './auth/auth.module';
 import {LayoutModule} from './layout/layout.module';
 import {AppRoutingModule} from './app-routing.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import {ServerService} from './shared/services/server.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-  ],
+  /*HeaderComponent*/],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     AuthModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
