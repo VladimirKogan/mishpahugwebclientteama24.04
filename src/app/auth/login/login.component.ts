@@ -18,7 +18,7 @@ export class LoginComponent implements AfterViewInit {
       const dialogRef = this.dialog.open(DialogLoginComponent, {
         height: '70vh',
         disableClose: true,
-        panelClass: ['col-11', 'col-sm-8', 'col-md-6', 'col-lg-3']
+        panelClass: ['col-12', 'col-sm-12', 'col-md-6', 'col-lg-3']
       });
     });
   }

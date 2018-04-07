@@ -17,7 +17,7 @@ export class RegistrationComponent implements AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       const dialogRef = this.dialog.open(DialogRegistrComponent, {
-        height: '70vh',
+        height: '75vh',
         disableClose: true,
         panelClass: ['col-11', 'col-sm-8', 'col-md-6', 'col-lg-3']
       });

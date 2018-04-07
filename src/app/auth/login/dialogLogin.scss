@@ -1,40 +1,55 @@
 .contLogo{
   background-color: #7a43b6;
-  height: 20%;
+  height: 10vh;
 }
-.buttons{
-  position: absolute;
-  padding-bottom: 10%;
+
+img{
+  width: 70%;
+  height: 10vh;
 }
 .full-width{
   width: 80%;
-  margin-bottom: 5%;
+  padding-top: 0vh;
+  padding-bottom: 4vh;
 }
 button{
   background-color: #7a43b6;
   color: white;
+  font-size: medium;
   font-weight: bold;
 }
 .userData{
-  padding-top: 15%;
-  height: 60%;
+  padding-top: 5vh;
+  font-size: medium;
 }
 .reg{
   text-align: center;
+  padding-top: 5vh;
+  font-size: medium;
+}
+
+.empty{
+  visibility: hidden;
 }
 .error{
   color: red;
-  height: 15%;
+  padding-top: 3vh;
 }
-.form{
-  height: 80%;
-}
-form{
-  height: 100%;
-}
+
 .link{
   color: #007bff;
   text-decoration: underline;
   cursor: pointer;
+  font-size: medium;
+}
+
+.button{
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+}
+
+.containerForm{
+  margin-right: 0;
+  margin-left: 0;
 }
 
