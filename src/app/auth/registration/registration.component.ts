@@ -1,41 +1,26 @@
-import {AfterViewInit, Component, EventEmitter, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {ServerService} from '../../shared/services/server.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {DataService} from '../../shared/services/data.service';
+import {LoginComponent} from '../login/login.component';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
-export class RegistrationComponent implements AfterViewInit {
+export class RegistrationComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      const dialogRef = this.dialog.open(DialogRegistrComponent, {
-        height: '75vh',
-        disableClose: true,
-        panelClass: ['col-11', 'col-sm-8', 'col-md-6', 'col-lg-3']
-      });
-    });
+  constructor(public dialogRef: MatDialogRef<RegistrationComponent>,
+              @Inject(MAT_DIALOG_DATA) data: any,
+              private server: ServerService,
+              private router: Router,
+              private dataServ: DataService,
+              private dialog: MatDialog) {
   }
-}
 
-@Component({
-  selector: 'app-registr-login',
-  templateUrl: './dialogRegistr.html',
-  styleUrls: ['./dialogRegistr.scss']
-})
-export class DialogRegistrComponent implements OnInit {
-  constructor( public dialogRef: MatDialogRef<DialogRegistrComponent>,
-               @Inject(MAT_DIALOG_DATA) data: any,
-               private server: ServerService,
-               private router: Router,
-               private dataServ: DataService) {}
   form: FormGroup;
   passLength = 6;
   hasError = false;
@@ -59,7 +44,8 @@ export class DialogRegistrComponent implements OnInit {
       return {
         'notEqual': true
       }
-    } return null;
+    }
+    return null;
   }
 
   getErrorMessagePassRepeat() {
@@ -84,7 +70,7 @@ export class DialogRegistrComponent implements OnInit {
         this.dataServ.saveData(data);
         this.hasError = false;
         // transfer to the needed FillProfile component to continue registration
-        this.navigate('/wellcome');
+        this.navigate('/auth');
       },
       error => {
         localStorage.removeItem('token');
@@ -105,9 +91,23 @@ export class DialogRegistrComponent implements OnInit {
     );
   }
 
-  navigate (link) {
+  openLogin() {
     this.dialogRef.close();
-    setTimeout (() => {
+    setTimeout(() => {
+      const dialogRef1 = this.dialog.open(LoginComponent, {
+        minHeight: '70vh',
+        closeOnNavigation: true,
+        disableClose: false,
+        autoFocus: true,
+        panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+      });
+    }, 500);
+
+  }
+
+  navigate(link) {
+    this.dialogRef.close();
+    setTimeout(() => {
       this.router.navigate([link]);
     }, 500);
   }

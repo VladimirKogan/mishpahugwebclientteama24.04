@@ -16,8 +16,7 @@ import {DataService} from './shared/services/data.service';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-  /*HeaderComponent*/],
+    FooterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

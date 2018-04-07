@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <a mat-button routerLink="./"><mat-icon>home</mat-icon><span class="mat-button-wrapper">Home</span> </a>
     <span class="fill-space"></span>
-    <a mat-button [routerLink]="['/login']"><mat-icon>fingerprint</mat-icon><span class="mat-button-wrapper">Login</span></a>
-    <a mat-button [routerLink]="['/registration']"><mat-icon>account_circle</mat-icon><span class="mat-button-wrapper">Create Account</span></a>
+    <a mat-button (click)="toLogin()"><mat-icon>fingerprint</mat-icon><span class="mat-button-wrapper">Login</span></a>
+    <a mat-button (click)="toRegistrate()"><mat-icon>account_circle</mat-icon><span class="mat-button-wrapper">Create Account</span></a>
   </mat-toolbar-row>
 </mat-toolbar>

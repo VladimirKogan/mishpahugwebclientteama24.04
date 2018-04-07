@@ -1,39 +1,24 @@
-import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ServerService} from '../../shared/services/server.service';
+import {RegistrationComponent} from '../registration/registration.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements AfterViewInit {
 
-  constructor(public dialog: MatDialog) {}
+export class LoginComponent implements OnInit {
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      const dialogRef = this.dialog.open(DialogLoginComponent, {
-        height: '70vh',
-        disableClose: true,
-        panelClass: ['col-12', 'col-sm-12', 'col-md-6', 'col-lg-3']
-      });
-    });
-  }
-}
+  constructor(public dialogRef: MatDialogRef<LoginComponent>,
+              @Inject(MAT_DIALOG_DATA) data: any,
+              private server: ServerService,
+              private router: Router,
+              private dialog: MatDialog) {}
 
-@Component({
-  selector: 'app-dialog-login',
-  templateUrl: './dialogLogin.html',
-  styleUrls: ['./dialogLogin.scss']
-})
-export class DialogLoginComponent implements OnInit {
-  constructor( public dialogRef: MatDialogRef<DialogLoginComponent>,
-               @Inject(MAT_DIALOG_DATA) data: any,
-               private server: ServerService,
-               private router: Router) {}
   form: FormGroup;
   passLength = 6;
   hasError = false;
@@ -83,6 +68,19 @@ export class DialogLoginComponent implements OnInit {
         }
       }
     );
+  }
+
+  toRegistrate() {
+    this.dialogRef.close();
+    setTimeout (() => {
+      this.dialog.open(RegistrationComponent, {
+        minHeight: '75vh',
+        closeOnNavigation: true,
+        disableClose: false,
+        autoFocus: true,
+        panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+      });
+    }, 500);
   }
 
   navigate (link) {
