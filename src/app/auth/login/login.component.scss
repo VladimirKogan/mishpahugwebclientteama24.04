@@ -1,0 +1,55 @@
+.contLogo{
+  background-color: #7a43b6;
+  height: 10vh;
+}
+
+img{
+  width: 70%;
+  height: 10vh;
+}
+.full-width{
+  width: 80%;
+  padding-top: 0vh;
+  padding-bottom: 4vh;
+}
+button{
+  background-color: #7a43b6;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+}
+.userData{
+  padding-top: 5vh;
+  font-size: medium;
+}
+.reg{
+  text-align: center;
+  padding-top: 5vh;
+  font-size: medium;
+}
+
+.empty{
+  visibility: hidden;
+}
+.error{
+  color: red;
+  padding-top: 3vh;
+}
+
+.link{
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.button{
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+}
+
+.containerForm{
+  margin-right: 0;
+  margin-left: 0;
+}
+
