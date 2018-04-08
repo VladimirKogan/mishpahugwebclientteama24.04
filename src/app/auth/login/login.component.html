@@ -1,3 +1,43 @@
-<p>
-  login works!
-</p>
+<div class="contLogo container-flex">
+  <img class="col-12 col-sm-7 col-md-6 col-lg-7" src="../../../assets/images/Logo.png" alt="logo">
+</div>
+
+<div class="containerForm">
+  <div class="form col-12 col-sm-12 col-md-12 col-lg-12">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div class="userData">
+        <div mat-dialog-content>
+          <div>
+            <span><mat-icon>email</mat-icon></span>
+            <mat-form-field class="full-width">
+              <input class="email" matInput type="email" placeholder="Email" formControlName="email" required>
+              <mat-error *ngIf="form.get('email').invalid">{{getErrorMessageEmail()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-icon>lock</mat-icon>
+            <mat-form-field class="full-width" hintLabel="Min 6 characters">
+              <input matInput type="password" placeholder="Password" formControlName="password" required>
+              <mat-error *ngIf="form.get('password').invalid">{{getErrorMessagePass()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="reg">
+        <span>Still don't have account?</span>
+        <span (click)="toRegistrate()" class="link">Registration</span>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center error">
+        <span *ngIf="!err" class="empty">Empty</span>
+        <span>{{err}}</span>
+      </div>
+
+      <div class="d-flex flex-row justify-content-center button">
+        <div mat-dialog-actions>
+          <button type="submit" mat-button [disabled]="form.invalid">Log in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
