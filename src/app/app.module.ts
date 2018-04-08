@@ -8,6 +8,8 @@ import {AuthModule} from './auth/auth.module';
 import {LayoutModule} from './layout/layout.module';
 import {AppRoutingModule} from './app-routing.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { HttpClientModule} from '@angular/common/http';
+import {HttpService} from './shared/services/http.service';
 
 
 @NgModule({
@@ -21,9 +23,10 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     MaterialModule,
     AuthModule,
     LayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
