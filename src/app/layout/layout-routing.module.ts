@@ -9,7 +9,6 @@ const routes: Routes = [
   children: [
     {path: 'wellcome', component: WellcomePageComponent},
     {path: '', redirectTo: 'wellcome', pathMatch: 'full'},
-
   ]
   }
 ];

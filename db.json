@@ -1,0 +1,33 @@
+{
+  "staticFields": {
+    "confession": [
+      "None",
+      "Judaism",
+      "Christianity",
+      "Islam",
+      "Buddhism"
+    ],
+    "gender": [
+      "Male",
+      "Female",
+      "Another"
+    ],
+    "maritalStatus": [
+      "Married",
+      "Unmarried",
+      "Divorced",
+      "Widow"
+    ],
+    "foodPreferences": [
+      "Any",
+      "Vegetarian"
+    ],
+    "languages": [
+      "English",
+      "Hebrew",
+      "Russian",
+      "Esperanto"
+    ]
+  },
+  "profile": {}
+}
