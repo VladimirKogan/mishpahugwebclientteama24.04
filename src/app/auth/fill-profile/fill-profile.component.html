@@ -146,7 +146,7 @@
       </div>
     </div>
     <div class="positionbtn">
-      <div *ngIf="[hasError]" class="error col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{error}}</div>
+      <div *ngIf="[hasError]" class="error col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{errorField}}</div>
       <button mat-button type="submit" class="btn_save" [disabled]="registerForm.invalid">Save</button>
     </div>
   </form>
