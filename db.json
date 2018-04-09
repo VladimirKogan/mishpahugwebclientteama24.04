@@ -25,9 +25,12 @@
     "languages": [
       "English",
       "Hebrew",
-      "Russian",
-      "Esperanto"
+      "Russian"
     ]
   },
-  "profile": {}
+  "profile": {},
+  "registration": {
+    "email": "test@f",
+    "password": "123456"
+  }
 }

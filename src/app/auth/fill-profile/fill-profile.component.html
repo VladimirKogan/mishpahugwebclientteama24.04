@@ -16,33 +16,26 @@
 
         <div class="total-group">
           <mat-form-field class="example-full-width">
-            <input matInput type="text" placeholder="First Name" id="inputFirstName" formControlName="firstName" required>
+            <input matInput type="text" placeholder="First Name" id="inputFirstName" formControlName="firstName"
+                   required>
+            <mat-error *ngIf="registerForm.get('firstName').invalid">{{getErrorMessageName()}}</mat-error>
           </mat-form-field>
         </div>
-
-        <!--<div class="total-group">
-          <label for="inputFullName">Full name</label>
-          <input type="text" class="form-control" id="inputFullName" placeholder="Full name"></div>-->
 
         <div class="total-group">
           <mat-form-field class="example-full-width">
             <input matInput type="text" placeholder="Last Name" id="inputLastName" formControlName="lastName" required>
+            <mat-error *ngIf="registerForm.get('lastName').invalid">{{getErrorMessageName()}}</mat-error>
           </mat-form-field>
         </div>
-
-        <!--<div class="total-group">
-          <label for="inputSecondName">Second name</label>
-          <input type="text" class="form-control" id="inputSecondName" placeholder="Second name"></div>-->
 
         <div class="total-group">
           <mat-form-field class="example-full-width">
-            <input matInput type="number" placeholder="Phone Number" id="inputPhoneNumber" formControlName="phoneNumber" value="" required>
+            <input matInput type="number" placeholder="Phone Number" id="inputPhoneNumber" formControlName="phoneNumber"
+                   required>
+            <mat-error *ngIf="registerForm.get('phoneNumber').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
-        <!--<div class="total-group">
-          <label for="inputPelefonNumber">Phone Number</label>
-          <input type="text" class="form-control" id="inputPelefonNumber" placeholder="Phone Number"></div>-->
-
 
         <div class="total-group">
           <mat-form-field>
@@ -51,31 +44,17 @@
                 {{ conf }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="registerForm.get('confession').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
-
-        <!--<div class="total-group">
-          <label for="inputConfession">Confession</label>
-          <select id="inputConfession" class="form-control">
-
-            <option>Non</option>
-            <option>Judaism</option>
-            <option>Christianity</option>
-            <option>Islam</option>
-            <option>Budist</option>
-          </select>
-        </div>-->
 
         <div class="total-group">
           <mat-form-field class="example-full-width">
-            <input matInput type="date" placeholder="Date Of Birth" id="inputDateOfBirth" formControlName="dateOfBirth" required>
+            <input matInput type="date" placeholder="Date Of Birth" id="inputDateOfBirth" formControlName="dateOfBirth"
+                   required>
+            <mat-error *ngIf="registerForm.get('dateOfBirth').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
-
-        <!--<div class="total-group">
-          <label for="inputDate">Data of Birth</label>
-          <input type="date" class="form-control" id="inputDate" placeholder="Data of Birth">
-        </div>-->
 
       </div>
 
@@ -91,36 +70,20 @@
                 {{ mstatus }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="registerForm.get('maritalStatus').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
-
-
-        <!--<div class="total-group"><label for="inputMaritalStatus">Marital status</label>
-          <select id="inputMaritalStatus" class="form-control">
-            <option>Married</option>
-            <option>unmarried</option>
-            <option>divorced</option>
-            <option>widow</option>
-          </select></div>-->
 
         <div class="total-group">
           <mat-form-field>
             <mat-select placeholder="Food Preferences" formControlName="foodPreferences" multiple required>
-              <mat-option *ngFor="let food of staticFields.foodPreferences" [value]="food"  ngDefaultControl>
+              <mat-option *ngFor="let food of staticFields.foodPreferences" [value]="food" ngDefaultControl>
                 {{ food }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="registerForm.get('foodPreferences').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
-
-        <!--<div class="total-group">
-          <label for="inputFoodPrefences">Food Preferences</label>
-          <select id="inputFoodPrefences" class="form-control">
-            <option>Any</option>
-            <option>Vegetarian</option>
-            <option></option>
-          </select></div>-->
-
 
         <div class="total-group">
           <mat-form-field>
@@ -129,16 +92,18 @@
                 {{ gender }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="registerForm.get('gender').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
 
         <div class="total-group">
           <mat-form-field>
             <mat-select placeholder="Languages" formControlName="languages" multiple required>
-              <mat-option *ngFor="let language of staticFields.languages" [value]="language"  ngDefaultControl>
+              <mat-option *ngFor="let language of staticFields.languages" [value]="language" ngDefaultControl>
                 {{ language }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="registerForm.get('languages').invalid">{{'This field is mandatory'}}</mat-error>
           </mat-form-field>
         </div>
 
@@ -147,10 +112,13 @@
       <div class="col-sm-11 col-lg-4">
         <div class="classCentr">
 
-          <button><img src="../../../assets/images/avatar-male.png" class="img"></button>
+          <button type="button"><img src="../../../assets/images/avatar-male.png" class="img">
+          </button>
         </div>
 
-        <!--<input math-input type="file" placeholder="change picture">-->
+
+        <!--<input math-input type="file" placeholder="change picture" id="pictureInput" formControlName="pictureLink">-->
+
         <h3 class="classCentr">Change picture</h3>
 
 
@@ -166,10 +134,13 @@
             </label>
 
             <mat-form-field>
-              <textarea matInput class=container rows="4" id="description" placeholder="Write about yourself" formControlName="description" required></textarea>
+              <textarea matInput class=container rows="4" id="description" placeholder="Write about yourself"
+                        formControlName="description" required></textarea>
+              <mat-error *ngIf="registerForm.get('description').invalid">{{'This field is mandatory'}}</mat-error>
             </mat-form-field>
 
             <!--<textarea class=container rows="4" id="inputhobbies" placeholder="Type Hobbies"></textarea>-->
+
           </div>
         </div>
       </div>

@@ -8,14 +8,15 @@ import {AuthModule} from './auth/auth.module';
 import {LayoutModule} from './layout/layout.module';
 import {AppRoutingModule} from './app-routing.module';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import {ServerService} from './shared/services/server.service';
 import {HttpClientModule} from '@angular/common/http';
+import {DataService} from './shared/services/data.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-  ],
+    FooterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -23,9 +24,9 @@ import {HttpClientModule} from '@angular/common/http';
     AuthModule,
     LayoutModule,
     AppRoutingModule,
-    HttpClientModule // for send messages to serve !!!!
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServerService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
