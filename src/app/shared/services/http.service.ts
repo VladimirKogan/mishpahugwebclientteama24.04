@@ -2,10 +2,11 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {EventListCardModel} from '../models/evnt-list-card.model';
+// import 'rxjs/add/operator/map';
 
 @Injectable()
 export class HttpService {
-  BASE_URL = 'https://c86d1e63-e648-45b8-aa75-8d6df579497c.mock.pstmn.io';
+
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -16,6 +17,9 @@ export class HttpService {
   }
 
   getListOfEventsInProgress(page: number, size: number, data: Object): Observable<EventListCardModel[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
     // return this.http.post(this.BASE_URL + '/events?page={' + page + '}&size={' + size + '}', data, this.httpOptions)
     return this.http.get('http://localhost:3000/')
       .map(cardsData => {
