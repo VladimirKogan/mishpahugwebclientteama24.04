@@ -40,9 +40,20 @@
     <br>
     <div class="row">
       <div class="col gorisontal-right">
-        <button mat-raised-button>Add Event</button>
+        <button mat-fab color="warn"><img src="../../../assets/icons/ic_add_white_24dp_1x.png" height="24" width="24"/>
+        </button>
       </div>
     </div>
+    <br>
+    <div class="row">
+      <div class="col">
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   (page)="pageEvent = $event">
+    </mat-paginator>
+      </div>
+    </div>
+    <br>
   </div>
-<mat-paginator></mat-paginator>
 </div>

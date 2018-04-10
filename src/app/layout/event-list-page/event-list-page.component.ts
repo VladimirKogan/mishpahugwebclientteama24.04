@@ -4,8 +4,7 @@ import {EventListCardModel} from '../../shared/models/evnt-list-card.model';
 import {ServerService} from '../../shared/services/server.service';
 import {LoginComponent} from '../../auth/login/login.component';
 import {MatDialog} from '@angular/material';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {PageEvent} from '@angular/material';
+
 
 @Component({
   selector: 'app-event-list-page',
@@ -14,6 +13,10 @@ import {PageEvent} from '@angular/material';
 })
 export class EventListPageComponent implements OnInit {
   eventCards: EventListCardModel[] = [];
+  // pagination
+  length = 100;
+  pageSize = 12;
+  pageSizeOptions = [12, 24, 48];
 
   postData = {
     city: 'Tel Aviv-Yafo',
