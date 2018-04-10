@@ -9,12 +9,18 @@ import {RegistrationComponent} from '../../../auth/registration/registration.com
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  showMenu() {
+    if (localStorage.length !== 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   toLogin() {
     this.dialog.open(LoginComponent, {
       /*minHeight: '70vh',

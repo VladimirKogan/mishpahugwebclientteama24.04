@@ -1,6 +1,8 @@
 <mat-toolbar class="mat-primary">
   <mat-toolbar-row>
-    <app-menu></app-menu>
+
+    <span *ngIf="showMenu()"><app-menu></app-menu></span>
+
     <a mat-button routerLink="./">
       <mat-icon>home</mat-icon>
       <span class="mat-button-wrapper">Home</span>
