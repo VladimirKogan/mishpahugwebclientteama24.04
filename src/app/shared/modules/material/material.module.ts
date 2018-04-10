@@ -10,7 +10,8 @@ import {
   MatNativeDateModule,
   MatProgressBarModule,
   MatToolbarModule,
-  MatSelectModule } from '@angular/material';
+  MatSelectModule, MatTooltipModule
+} from '@angular/material';
 
 
 
@@ -27,7 +28,8 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   exports: [
     MatButtonModule,
@@ -41,7 +43,8 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule {
