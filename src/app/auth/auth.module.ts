@@ -6,26 +6,31 @@ import {/*DialogRegistrComponent, */RegistrationComponent} from './registration/
 import {AuthComponent} from './auth.component';
 import {AuthRoutingModule} from './auth-routing.module';
 import {MaterialModule} from '../shared/modules/material/material.module';
-import {ReactiveFormsModule} from '@angular/forms';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FillProfileComponent} from './fill-profile/fill-profile.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegistrationComponent,
-    AuthComponent/*,
-    DialogLoginComponent,
-    DialogRegistrComponent*/
-  ],
+    AuthComponent,
+    FillProfileComponent],
 
-  //entryComponents: [DialogLoginComponent, DialogRegistrComponent],
   entryComponents: [LoginComponent, RegistrationComponent],
 
   imports: [
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
+
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [
     ReactiveFormsModule
   ]
+
 })
 
 export class AuthModule {

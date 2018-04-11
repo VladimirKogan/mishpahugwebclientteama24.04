@@ -10,7 +10,10 @@ const routes: Routes = [
   children: [
     {path: 'wellcome', component: WellcomePageComponent},
     {path: '', redirectTo: 'wellcome', pathMatch: 'full'},
+<<<<<<< HEAD
     {path: 'eventlist', component: EventListPageComponent}
+=======
+>>>>>>> be13a0eba7c967948a838d0ace76f719bb6f7bce
   ]
   }
 ];

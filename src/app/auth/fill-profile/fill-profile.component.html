@@ -1,0 +1,153 @@
+<div class="container">
+  <div class="row align-item-center">
+    <div class="col-2"><img src="../../../assets/images/Logo.png" class="img-1"></div>
+    <div class="col-lg-8 col-lg-5 ">
+      <br>
+      <h1 class="classCentr"> Registration</h1>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="sendUserProfile()">
+    <div class="row">
+      <div class="col-sm-11 col-lg-4">
+        <h4 class="classCentr">Personal<p> information</h4>
+
+        <div class="total-group">
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="First Name" id="inputFirstName" formControlName="firstName"
+                   required>
+            <mat-error *ngIf="registerForm.get('firstName').invalid">{{getErrorMessageName()}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Last Name" id="inputLastName" formControlName="lastName" required>
+            <mat-error *ngIf="registerForm.get('lastName').invalid">{{getErrorMessageName()}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Phone Number" id="inputPhoneNumber" formControlName="phoneNumber"
+                   required>
+            <mat-error *ngIf="registerForm.get('phoneNumber').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field>
+            <mat-select placeholder="Confession" formControlName="confession" required>
+              <mat-option *ngFor="let conf of staticFields.confession" [value]="conf" ngDefaultControl>
+                {{ conf }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.get('confession').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field class="example-full-width">
+            <input matInput type="date" placeholder="Date Of Birth" id="inputDateOfBirth" formControlName="dateOfBirth"
+                   required>
+            <mat-error *ngIf="registerForm.get('dateOfBirth').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+
+      <div class="col-sm-11 col-lg-4">
+
+        <h4 class="classCentr">About<p> myself</h4>
+
+        <div class="total-group">
+          <mat-form-field>
+            <mat-select placeholder="Marital Status" formControlName="maritalStatus" required>
+              <mat-option *ngFor="let mstatus of staticFields.maritalStatus" [value]="mstatus" ngDefaultControl>
+                {{ mstatus }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.get('maritalStatus').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field>
+            <mat-select placeholder="Food Preferences" formControlName="foodPreferences" multiple required>
+              <mat-option *ngFor="let food of staticFields.foodPreferences" [value]="food" ngDefaultControl>
+                {{ food }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.get('foodPreferences').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field>
+            <mat-select placeholder="Gender" formControlName="gender" required>
+              <mat-option *ngFor="let gender of staticFields.gender" [value]="gender" ngDefaultControl>
+                {{ gender }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.get('gender').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="total-group">
+          <mat-form-field>
+            <mat-select placeholder="Languages" formControlName="languages" multiple required>
+              <mat-option *ngFor="let language of staticFields.languages" [value]="language" ngDefaultControl>
+                {{ language }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="registerForm.get('languages').invalid">{{'This field is mandatory'}}</mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="col-sm-11 col-lg-4">
+        <div class="classCentr">
+
+          <button type="button"><img src="../../../assets/images/avatar-male.png" class="img">
+          </button>
+        </div>
+
+
+        <!--<input math-input type="file" placeholder="change picture" id="pictureInput" formControlName="pictureLink">-->
+
+        <h3 class="classCentr">Change picture</h3>
+
+
+        <div class="row">
+          <div class=container>
+            <label for="description">
+              <div class="text" id="text">
+                <p class="descriptionText"> Few words about yourself , hobbies
+                  and how do you spend your free time</p>
+
+
+              </div>
+            </label>
+
+            <mat-form-field>
+              <textarea matInput class=container rows="4" id="description" placeholder="Write about yourself"
+                        formControlName="description" required></textarea>
+              <mat-error *ngIf="registerForm.get('description').invalid">{{'This field is mandatory'}}</mat-error>
+            </mat-form-field>
+
+            <!--<textarea class=container rows="4" id="inputhobbies" placeholder="Type Hobbies"></textarea>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="positionbtn">
+      <div *ngIf="[hasError]" class="error col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{errorField}}</div>
+      <button mat-button type="submit" class="btn_save" [disabled]="registerForm.invalid">Save</button>
+    </div>
+  </form>
+</div>

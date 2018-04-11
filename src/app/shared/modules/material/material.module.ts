@@ -10,8 +10,13 @@ import {
   MatNativeDateModule,
   MatProgressBarModule,
   MatToolbarModule,
+<<<<<<< HEAD
   MatPaginatorModule
 } from '@angular/material';
+=======
+  MatSelectModule } from '@angular/material';
+
+>>>>>>> be13a0eba7c967948a838d0ace76f719bb6f7bce
 
 
 @NgModule({
@@ -26,8 +31,13 @@ import {
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+<<<<<<< HEAD
     MatDialogModule,
     MatPaginatorModule
+=======
+    MatSelectModule,
+    MatDialogModule
+>>>>>>> be13a0eba7c967948a838d0ace76f719bb6f7bce
   ],
   exports: [
     MatButtonModule,
@@ -40,8 +50,13 @@ import {
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+<<<<<<< HEAD
     MatDialogModule,
     MatPaginatorModule
+=======
+    MatSelectModule,
+    MatDialogModule
+>>>>>>> be13a0eba7c967948a838d0ace76f719bb6f7bce
   ]
 })
 export class MaterialModule {

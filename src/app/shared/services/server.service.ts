@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class ServerService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'https://c86d1e63-e648-45b8-aa75-8d6df579497c.mock.pstmn.io';
+  baseUrl = 'http://localhost:3000';  /*https://c86d1e63-e648-45b8-aa75-8d6df579497c.mock.pstmn.io';*/
 
   registrate(email, password) {
     // we can create separate call User with fields email and password and put him into request
@@ -45,6 +45,7 @@ export class ServerService {
     };
     return this.http.post(url, {email, password}, httpOptions);
   }
+<<<<<<< HEAD
   getListOfEventsInProgress(page: number, size: number, data: Object): Observable<EventListCardModel[]> {
     const httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -76,5 +77,24 @@ export class ServerService {
           card['owner']['rate']);
       });
     });
+=======
+
+  getStaticFields() {
+    const headers = new HttpHeaders({
+      'Content-type': 'application/json;'
+    });
+    return this.http.get(this.baseUrl + '/staticfields', {headers});
+  }
+
+
+  regUserProfile(value: any) {
+    const token = localStorage.getItem('token');
+    // console.log(token);
+    const headers = new HttpHeaders({
+      'Content-type': 'application/json;',
+      'Authorization': token
+    });
+    return this.http.post(this.baseUrl + '/profile', value, {headers});
+>>>>>>> be13a0eba7c967948a838d0ace76f719bb6f7bce
   }
 }

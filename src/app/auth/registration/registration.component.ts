@@ -12,7 +12,6 @@ import {LoginComponent} from '../login/login.component';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
-
   constructor(public dialogRef: MatDialogRef<RegistrationComponent>,
               @Inject(MAT_DIALOG_DATA) data: any,
               private server: ServerService,
@@ -43,7 +42,7 @@ export class RegistrationComponent implements OnInit {
     if (control.value !== this.curPass) {
       return {
         'notEqual': true
-      }
+      };
     }
     return null;
   }
@@ -70,7 +69,7 @@ export class RegistrationComponent implements OnInit {
         this.dataServ.saveData(data);
         this.hasError = false;
         // transfer to the needed FillProfile component to continue registration
-        this.navigate('/auth');
+        this.navigate('/fill-profile');
       },
       error => {
         localStorage.removeItem('token');
