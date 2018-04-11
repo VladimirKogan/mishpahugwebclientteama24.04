@@ -37,8 +37,8 @@ export class EventListPageComponent implements OnInit {
 
   ngOnInit() {
     // temporary work with authorization
-    localStorage.setItem('token', 'asdfasdfasdf');
-    localStorage.removeItem('token');
+    /*localStorage.setItem('token', 'asdfasdfasdf');
+    localStorage.removeItem('token');*/
 
     // this.getEventListCards();
     this.loadEventList();
