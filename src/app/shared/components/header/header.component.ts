@@ -9,29 +9,35 @@ import {RegistrationComponent} from '../../../auth/registration/registration.com
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  showMenu() {
+    if (localStorage.length !== 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   toLogin() {
     this.dialog.open(LoginComponent, {
-      minHeight: '70vh',
+      /*minHeight: '70vh',
       closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
-      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 
   toRegistrate() {
     this.dialog.open(RegistrationComponent, {
-      minHeight: '75vh',
+     /* minHeight: '75vh',
       closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
-      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 }

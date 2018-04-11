@@ -5,7 +5,8 @@ import {LayoutRoutingModule} from './layout-routing.module';
 import { WellcomePageComponent } from './wellcome-page/wellcome-page.component';
 import {MaterialModule} from '../shared/modules/material/material.module';
 import {HeaderComponent} from '../shared/components/header/header.component';
-import { EventListPageComponent } from './event-list-page/event-list-page.component';
+import {MenuComponent} from '../shared/components/menu/menu.component';
+import {EventListPageComponent} from './event-list-page/event-list-page.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { EventListPageComponent } from './event-list-page/event-list-page.compon
   declarations: [
     LayoutComponent,
     HeaderComponent,
+    MenuComponent,
     WellcomePageComponent,
     EventListPageComponent]
 })
