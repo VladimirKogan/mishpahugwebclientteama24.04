@@ -13,11 +13,13 @@ import {MatDialog} from '@angular/material';
 })
 export class EventListPageComponent implements OnInit {
   eventCards: EventListCardModel[] = [];
+
   // pagination
   length = 100;
   pageSize = 12;
   pageSizeOptions = [12, 24, 48];
 
+  // Data for request
   postData = {
     city: 'Tel Aviv-Yafo',
     place_id: 'ChIJH3w7GaZMHRURkD-WwKJy-8E',
@@ -34,8 +36,10 @@ export class EventListPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    // temporary work with authorization
     localStorage.setItem('token', 'asdfasdfasdf');
     localStorage.removeItem('token');
+
     // this.getEventListCards();
     this.loadEventList();
 
@@ -49,6 +53,7 @@ export class EventListPageComponent implements OnInit {
     }
   }
 
+// TO DO
   getEventListCards() {
     this.serverService.getListOfEventsInProgress(0, 2, this.postData)
       .subscribe((object: Object) => {
@@ -56,6 +61,7 @@ export class EventListPageComponent implements OnInit {
       });
   }
 
+// temporary request to server
   loadEventList() {
     this.serverService.getContent()
       .subscribe(data => {
@@ -64,6 +70,7 @@ export class EventListPageComponent implements OnInit {
 
   }
 
+  // Login
   toLogin() {
     this.dialog.open(LoginComponent, {
       minHeight: '70vh',
