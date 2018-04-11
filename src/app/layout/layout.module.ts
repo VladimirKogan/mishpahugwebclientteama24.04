@@ -7,6 +7,7 @@ import {MaterialModule} from '../shared/modules/material/material.module';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {MenuComponent} from '../shared/components/menu/menu.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
+import { ChangePictureComponent } from './change-picture/change-picture.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {EventListPageComponent} from './event-list-page/event-list-page.componen
     HeaderComponent,
     MenuComponent,
     WellcomePageComponent,
-    EventListPageComponent]
+    EventListPageComponent,
+    ChangePictureComponent]
 })
 
 export class LayoutModule {}
