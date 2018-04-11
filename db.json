@@ -30,7 +30,89 @@
   },
   "profile": {},
   "registration": {
-    "email": "test@g",
-    "password": "123456"
-  }
+    "email": "jhf@hgjyhg",
+    "password": "111111"
+  },
+  "content": [
+    {
+      "eventId": 123,
+      "title": "Pesah",
+      "confession": "Jew",
+      "date": "2018-03-30",
+      "address": {
+        "city": "Tel Aviv-Yafo",
+        "place_id": "ChIJH3w7GaZMHRURkD-WwKJy-8E",
+        "location": {
+          "lat": 32.109333,
+          "lng": 34.855499
+        }
+      },
+      "kitchen": [
+        "kosher",
+        "non-vegetarian"
+      ],
+      "description": "Celebration of Pesah in classic Jewish tradishions.",
+      "status": "In progress",
+      "owner": {
+        "fullName": "Elsa Fishman",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 25,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/23/bf/25/23bf251cab0b742f9257506357e70f38.png",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 4
+      }
+    },
+    {
+      "eventId": 125,
+      "title": "Shabbat",
+      "confession": "Jew",
+      "date": "2018-04-07",
+      "address": {
+        "city": "Tel Aviv-Yafo",
+        "place_id": "ChIJH3w7GaZMHRURkD-WwKJy-8E",
+        "location": {
+          "lat": 32.109333,
+          "lng": 34.855499
+        }
+      },
+      "kitchen": [
+        "kosher",
+        "non-vegetarian"
+      ],
+      "description": "Shabbat dinner.",
+      "status": "In progress",
+      "owner": {
+        "fullName": "Moshe Amos",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 30,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/9e/83/e3/9e83e32c912925c27f05f86125217f53.jpg",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 2
+      }
+    }
+  ]
 }
