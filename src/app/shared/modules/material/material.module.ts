@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {
   MatButtonModule,
   MatCardModule,
-  MatDatepickerModule, MatDialogModule,
+  MatDatepickerModule,
+  MatDialogModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -10,9 +11,10 @@ import {
   MatNativeDateModule,
   MatProgressBarModule,
   MatToolbarModule,
-  MatSelectModule, MatTooltipModule
+  MatSelectModule,
+  MatTooltipModule,
+  MatPaginatorModule
 } from '@angular/material';
-
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import {
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
     MatTooltipModule
@@ -42,6 +45,7 @@ import {
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
     MatTooltipModule

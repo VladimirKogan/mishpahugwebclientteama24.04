@@ -6,6 +6,7 @@ import { WellcomePageComponent } from './wellcome-page/wellcome-page.component';
 import {MaterialModule} from '../shared/modules/material/material.module';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {MenuComponent} from '../shared/components/menu/menu.component';
+import {EventListPageComponent} from './event-list-page/event-list-page.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {MenuComponent} from '../shared/components/menu/menu.component';
     LayoutComponent,
     HeaderComponent,
     MenuComponent,
-    WellcomePageComponent]
+    WellcomePageComponent,
+    EventListPageComponent]
 })
 
 export class LayoutModule {}
