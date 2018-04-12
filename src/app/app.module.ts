@@ -24,7 +24,7 @@ import {DataService} from './shared/services/data.service';
     AuthModule,
     LayoutModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ServerService, DataService],
   bootstrap: [AppComponent]
