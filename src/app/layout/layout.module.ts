@@ -7,19 +7,23 @@ import {MaterialModule} from '../shared/modules/material/material.module';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {MenuComponent} from '../shared/components/menu/menu.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
+import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LayoutComponent,
     HeaderComponent,
     MenuComponent,
     WellcomePageComponent,
-    EventListPageComponent]
+    EventListPageComponent,
+    FillProfileComponent]
 })
 
 export class LayoutModule {}
