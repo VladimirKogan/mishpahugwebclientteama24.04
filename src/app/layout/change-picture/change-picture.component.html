@@ -26,7 +26,9 @@
     <div class="col-12 col-lg-6">
       <br>
       <div class="alignGorisontal">
-        <button class="picture">
+
+        <!--height="271" width="270" [routerLink]="'/imgcrop'"-->
+        <button class="picture" (click)="openImageCropper()" >
           <img src="../../../assets/images/noAvatarBoy.png" class="img-responsive">
         </button>
       </div>
@@ -37,9 +39,11 @@
     <div class="col-12 col-lg-6">
       <br>
       <div class="alignGorisontal">
+
         <button>
           <img class="img-responsive adaptive-picture" src="../../../assets/images/banner.png">
         </button>
+
       </div>
       <div class="alignGorisontal">
         <h3>Event banner</h3>

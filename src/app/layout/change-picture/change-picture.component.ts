@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material';
+import {ImgcropComponent} from '../../shared/components/imgcrop/imgcrop.component';
 
 @Component({
   selector: 'app-change-picture',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangePictureComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) {
+  }
 
   ngOnInit() {
+  }
+
+  openImageCropper() {
+    this.dialog.open(ImgcropComponent, {
+      autoFocus: false
+    });
   }
 
 }
