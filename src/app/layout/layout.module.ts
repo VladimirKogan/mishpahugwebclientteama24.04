@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ImageCropperComponent} from 'ngx-img-cropper';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {LayoutComponent} from './layout.component';
 import {LayoutRoutingModule} from './layout-routing.module';
@@ -9,6 +10,7 @@ import {MaterialModule} from '../shared/modules/material/material.module';
 import {HeaderComponent} from '../shared/components/header/header.component';
 import {MenuComponent} from '../shared/components/menu/menu.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
+import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
 import { ChangePictureComponent } from './change-picture/change-picture.component';
 import {ImgcropComponent} from '../shared/components/imgcrop/imgcrop.component';
 
@@ -16,7 +18,8 @@ import {ImgcropComponent} from '../shared/components/imgcrop/imgcrop.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LayoutComponent,
@@ -24,6 +27,7 @@ import {ImgcropComponent} from '../shared/components/imgcrop/imgcrop.component';
     MenuComponent,
     WellcomePageComponent,
     EventListPageComponent,
+    FillProfileComponent,
     ChangePictureComponent,
     ImgcropComponent,
     ImageCropperComponent

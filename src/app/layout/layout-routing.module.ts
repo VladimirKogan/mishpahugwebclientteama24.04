@@ -5,6 +5,7 @@ import {WellcomePageComponent} from './wellcome-page/wellcome-page.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
 import {ChangePictureComponent} from './change-picture/change-picture.component';
 import {ImgcropComponent} from '../shared/components/imgcrop/imgcrop.component';
+import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
       {path: '', redirectTo: 'wellcome', pathMatch: 'full'},
       {path: 'eventlist', component: EventListPageComponent},
       {path: 'changepicture', component: ChangePictureComponent},
-      {path: 'imgcrop', component: ImgcropComponent}
+      {path: 'imgcrop', component: ImgcropComponent},
+      {path: 'fill-profile', component: FillProfileComponent}
     ]
   }
 ];
