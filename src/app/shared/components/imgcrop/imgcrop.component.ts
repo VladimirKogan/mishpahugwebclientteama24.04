@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {Bounds, CropperSettings, ImageCropperComponent} from 'ngx-img-cropper';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-imgcrop',
@@ -13,12 +14,15 @@ export class ImgcropComponent implements OnInit {
   cropperSettings: CropperSettings;
   croppedWidth: number;
   croppedHeight: number;
+  picture = '';
 
   @ViewChild('cropper', undefined)
   cropper: ImageCropperComponent;
 
-  constructor(public dialogRef: MatDialogRef<ImgcropComponent>,
+  constructor( private dataServ: DataService,
+               public dialogRef: MatDialogRef<ImgcropComponent>,
               @Inject(MAT_DIALOG_DATA) data: any) {
+
     this.cropperSettings = new CropperSettings();
     this.cropperSettings.noFileInput = true;
 
@@ -43,18 +47,14 @@ export class ImgcropComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.cropper);
   }
 
   cropped(bounds: Bounds) {
     this.croppedHeight = bounds.bottom - bounds.top;
     this.croppedWidth = bounds.right - bounds.left;
-    console.log(this.data);
   }
 
   fileChangeListener($event) {
-    console.log('changed', event);
-
     const image: any = new Image();
     const file: File = $event.target.files[0];
     const myReader: FileReader = new FileReader();
@@ -74,8 +74,12 @@ export class ImgcropComponent implements OnInit {
       image: this.data.image
     };
     console.log(this.data.image);
-    this.dialogRef.close();
+    this.dataServ.savePicture('../../../assets/images/noAvatarGirl.png');
+    /*//////////////save picture on cloud and get https*/
+    this.dialogRef.close('../../../assets/images/noAvatarGirl.png');
+
     // this.httpClient.post<Observable<any>>('apiUrl', uploadData).subscribe();
   }
+
 
 }

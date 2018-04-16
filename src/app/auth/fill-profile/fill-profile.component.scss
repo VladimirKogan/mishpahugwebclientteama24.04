@@ -1,6 +1,12 @@
 mat-form-field{
   width: 100%;
 }
+#pictureTable{
+  min-height: 90vh;
+  //height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5F4F8D), to(#FFEED9)) fixed;
+  margin: 0;
+}
 
 #description{
   height: 11.5vh;
@@ -15,7 +21,6 @@ mat-form-field{
   font-size: medium;
 }
 
-
 .container {
   border-radius: 10px;
   padding-right: 15px;
@@ -24,37 +29,20 @@ mat-form-field{
   margin-left: auto;
 }
 
-.img {
+.picture {
+  padding: 0;
   border-radius: 50%;
   width: 120px;
   height: 120px;
 }
 
-.positionbtn{
+.positionbtn, .classCentr{
   text-align: center;
-}
-
-.btn_save {
-  padding: 6px 20px;
-  border-radius: 15%;
-  margin-top: 5ch;
-  background-color: #007bff;
-
-}
-
-.classCentr{
-  text-align: center;
-
 }
 
 .text {
   text-align: center;
   font-size: 18px;
-
-
-}
-.img-1{
-
 }
 
 .error{

@@ -7,7 +7,6 @@
   <title>Change avatar</title>
 </head>
 <body>
-<br>
 <div class="container">
   <div class="row alignVertical">
     <div class="col-10 order-1 col-xl-1 order-xl-1">
@@ -20,7 +19,6 @@
 
   </div>
 </div>
-<br>
 <div class="container">
   <div class="row alignVertical">
     <div class="col-12 col-lg-6">
@@ -29,7 +27,7 @@
 
         <!--height="271" width="270" [routerLink]="'/imgcrop'"-->
         <button class="picture" (click)="openImageCropper()" >
-          <img src="../../../assets/images/noAvatarBoy.png" class="img-responsive">
+          <img src={{picture}} height="271" width="270" class="img-responsive">
         </button>
       </div>
       <div class="alignGorisontal">
@@ -37,7 +35,6 @@
       </div>
     </div>
     <div class="col-12 col-lg-6">
-      <br>
       <div class="alignGorisontal">
 
         <button>
