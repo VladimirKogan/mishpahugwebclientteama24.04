@@ -31,4 +31,8 @@ export class EventsService {
   getEventsDone () {
     return this.eventsDone;
   }
+
+  addEventPending(event) {
+    this.eventsPending.push(event);
+  }
 }

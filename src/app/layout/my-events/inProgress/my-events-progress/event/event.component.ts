@@ -12,14 +12,6 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {}
 
-  right(element: HTMLBaseElement) {
-    return {
-      'right' : false,
-      'col-12' : true
-    //  'right' : true
-    }
-  }
-
   showSubscribers() {
     this.isShownSub = !this.isShownSub;
   }

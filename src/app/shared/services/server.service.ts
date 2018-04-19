@@ -91,7 +91,7 @@ export class ServerService {
         'Content-type': 'application/json;',
         'Authorization': token
       });
-      return this.http.get(this.baseUrl +
+      return this.http.put(this.baseUrl +
         '/pending/{' + eventId + '}', {headers});
     }
   }

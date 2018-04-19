@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ServerService} from '../../../../../shared/services/server.service';
 import {MatDialog} from '@angular/material';
 import {LoginComponent} from '../../../../../auth/login/login.component';
+import {EventsService} from '../../../events.service';
 
 @Component({
   selector: 'app-event-subscribers',
@@ -22,7 +23,9 @@ export class EventSubscribersComponent implements OnInit {
   isHigh = {};
   pictureLink = '';
 
-  constructor(private server: ServerService, private dialog: MatDialog) { }
+  constructor(private server: ServerService,
+              private dialog: MatDialog,
+              private eventsService: EventsService) { }
 
   ngOnInit() {
     this.isHigh = {
@@ -67,12 +70,13 @@ export class EventSubscribersComponent implements OnInit {
       this.server.changeEventStatus(this.event.eventId, token).subscribe(
       // to do
       //  (data) => this.event.status = data.status
+        () => this.eventsService.addEventPending(this.event)
       );
-    } else {
+    } /*else {
       this.dialog.open(LoginComponent, {
         height: '70vh',
       });
-    }
+    }*/
   }
   closeDetailes() {
     this.isDetailed = false;
