@@ -30,11 +30,11 @@
   },
   "profile": {},
   "registration": {
-    "email": "test@g",
+    "email": "denis@mail.com",
     "password": "123456"
   },
   "login": {
-    "email": "user1@gmail.com",
+    "email": "test@gmail.com",
     "password": "123456"
   },
   "content": [
@@ -120,8 +120,5 @@
         "rate": 2
       }
     }
-  ],
-  "subscription": {
-
-  }
+  ]
 }

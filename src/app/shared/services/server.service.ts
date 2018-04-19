@@ -10,7 +10,7 @@ export class ServerService {
   constructor(private http: HttpClient) {
   }
 
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'http://localhost:3000'; // https://mishpahug-backend.herokuapp.com
 
   /*https://c86d1e63-e648-45b8-aa75-8d6df579497c.mock.pstmn.io';*/
 
@@ -75,7 +75,7 @@ export class ServerService {
   getContent(): Observable<EventListCardModel[]> {
     return this.http.get('http://localhost:3000/content').map((cards: any) => {
       return cards.map((card) => {
-        console.log('CARD: ' + card['description']);
+        // console.log('CARD: ' + card['description']);
         return new EventListCardModel(card['eventId'],
           card['title'],
           card['holiday'], // field for EventInfo
@@ -113,6 +113,6 @@ export class ServerService {
       'Content-type': 'application/json;',
       'Authorization': token
     });
-    return this.http.put(this.baseUrl + '/subscription/{' + 123 + '}', {}, {headers});
+    return this.http.put(this.baseUrl + '/subscription/' + id, {}, {headers});
   }
 }

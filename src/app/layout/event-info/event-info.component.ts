@@ -30,7 +30,7 @@ export class EventInfoComponent implements OnInit {
     this.date = this.data.date;
     this.place = this.data.city;
     this.description = this.data.description;
-    console.log(this.data);
+    // console.log(this.data);
   }
 
   joinToEvent() {
@@ -41,7 +41,7 @@ export class EventInfoComponent implements OnInit {
         console.log(response);
       },
       (error) => {
-        console.log(error.body);
+        console.log(error);
       });
   }
 }
