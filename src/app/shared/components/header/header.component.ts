@@ -23,29 +23,13 @@ export class HeaderComponent implements OnInit {
   }
   toLogin() {
     this.dialog.open(LoginComponent, {
-<<<<<<< HEAD
       height: '70vh',
-=======
-      /*minHeight: '70vh',
->>>>>>> 983db80bec912057036d4ff0e6737d7bd542d002
-      closeOnNavigation: true,
-      disableClose: false,
-      autoFocus: true,
-      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 
   toRegistrate() {
     this.dialog.open(RegistrationComponent, {
-<<<<<<< HEAD
       height: '75vh',
-=======
-     /* minHeight: '75vh',
->>>>>>> 983db80bec912057036d4ff0e6737d7bd542d002
-      closeOnNavigation: true,
-      disableClose: false,
-      autoFocus: true,
-      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 }

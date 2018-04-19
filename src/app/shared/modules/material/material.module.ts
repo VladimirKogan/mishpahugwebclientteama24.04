@@ -12,17 +12,12 @@ import {
   MatProgressBarModule,
   MatToolbarModule,
   MatSelectModule,
-<<<<<<< HEAD
   MatTabsModule,
   MatListModule,
-  MatCheckboxModule, MatTooltipModule, MatTooltip
-} from '@angular/material';
-
-=======
+  MatCheckboxModule,
   MatTooltipModule,
   MatPaginatorModule
 } from '@angular/material';
->>>>>>> 983db80bec912057036d4ff0e6737d7bd542d002
 
 
 @NgModule({
@@ -40,12 +35,9 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
-<<<<<<< HEAD
     MatTabsModule,
     MatListModule,
     MatCheckboxModule,
-=======
->>>>>>> 983db80bec912057036d4ff0e6737d7bd542d002
     MatTooltipModule
   ],
   exports: [
@@ -62,14 +54,10 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
-<<<<<<< HEAD
     MatTabsModule,
     MatListModule,
     MatCheckboxModule,
-    MatTooltip
-=======
     MatTooltipModule
->>>>>>> 983db80bec912057036d4ff0e6737d7bd542d002
   ]
 })
 export class MaterialModule {
