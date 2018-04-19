@@ -8,14 +8,12 @@ import {AuthRoutingModule} from './auth-routing.module';
 import {MaterialModule} from '../shared/modules/material/material.module';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {FillProfileComponent} from './fill-profile/fill-profile.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegistrationComponent,
-    AuthComponent,
-    FillProfileComponent],
+    AuthComponent],
 
   entryComponents: [LoginComponent, RegistrationComponent],
 

@@ -1,0 +1,60 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Event list</title>
+</head>
+<div class="bc-color">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="gorisontal-center">Event list</h1>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12 align-self-start">
+        <button mat-raised-button>Filters</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let card of eventCards">
+        <mat-card class="event-list-card">
+          <img mat-card-image class="img-banner" src='{{card.picture}}'>
+          <mat-card-content>
+            <p class="gorisontal-center">{{card.owner}} family</p>
+            <img class="img-stars" src="../../../assets/images/oneStar.png"/>
+            <br>
+            <p class="gorisontal-center">{{card.city}}</p>
+            <p class="gorisontal-center">{{card.title}}</p>
+            <p class="gorisontal-center">{{card.date}}</p>
+          </mat-card-content>
+          <mat-card-actions class="gorisontal-center">
+            <button mat-button color="primary" (click)="goToEvent()">JOIN</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col gorisontal-right">
+        <button mat-fab color="warn"><img src="../../../assets/icons/ic_add_white_24dp_1x.png" height="24" width="24"/>
+        </button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">
+        <mat-paginator [length]="length"
+                       [pageSize]="pageSize"
+                       [pageSizeOptions]="pageSizeOptions"
+                       (page)="pageEvent = $event">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>
+
+

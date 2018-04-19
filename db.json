@@ -1,13 +1,57 @@
 {
-  "events": [
+  "staticFields": {
+    "confession": [
+      "None",
+      "Judaism",
+      "Christianity",
+      "Islam",
+      "Buddhism"
+    ],
+    "gender": [
+      "Male",
+      "Female",
+      "Another"
+    ],
+    "maritalStatus": [
+      "Married",
+      "Unmarried",
+      "Divorced",
+      "Widow"
+    ],
+    "foodPreferences": [
+      "Any",
+      "Vegetarian"
+    ],
+    "languages": [
+      "English",
+      "Hebrew",
+      "Russian"
+    ]
+  },
+  "profile": {},
+  "registration": {
+    "email": "denis@mail.com",
+    "password": "123456"
+  },
+  "login": {
+    "email": "denis@mail.com",
+    "password": "123456"
+  },
+  "content": [
     {
       "eventId": 123,
-      "title": "Celebration of Pesah ending",
-      "holiday": "Pesah",
-      "confession": "religious",
+      "title": "Pesah",
+      "confession": "Jew",
       "date": "2018-03-30",
-      "time": "18:32:00",
-      "food": [
+      "address": {
+        "city": "Tel Aviv-Yafo",
+        "place_id": "ChIJH3w7GaZMHRURkD-WwKJy-8E",
+        "location": {
+          "lat": 32.109333,
+          "lng": 34.855499
+        }
+      },
+      "kitchen": [
         "kosher",
         "non-vegetarian"
       ],
@@ -57,7 +101,27 @@
           "rate": 1.5,
           "isInvited": false
         }
-      ]
+      ],
+      "owner": {
+        "fullName": "Elsa Fishman",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 25,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/23/bf/25/23bf251cab0b742f9257506357e70f38.png",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 4
+      }
     },
     {
       "eventId": 125,
@@ -201,7 +265,27 @@
           "rate": 1.5,
           "isInvited": true
         }
-      ]
+      ],
+      "owner": {
+        "fullName": "Moshe Amos",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 30,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/9e/83/e3/9e83e32c912925c27f05f86125217f53.jpg",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 2
+      }
     }
   ],
 
@@ -234,6 +318,3 @@
     }
   ]
 }
-
-
-

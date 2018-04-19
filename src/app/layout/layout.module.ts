@@ -15,13 +15,18 @@ import {BarRatingModule} from 'ngx-bar-rating';
 import { PendingEventComponent } from './my-events/pending/my-events-pending/pending-event/pending-event.component';
 import { EveentParticipantsComponent } from './my-events/pending/my-events-pending/eveent-participants/eveent-participants.component';
 import { EventDoneComponent } from './my-events/done/my-events-done/event-done/event-done.component';
+import {MenuComponent} from '../shared/components/menu/menu.component';
+import {EventListPageComponent} from './event-list-page/event-list-page.component';
+import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     LayoutRoutingModule,
     MaterialModule,
-    BarRatingModule
+    BarRatingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     LayoutComponent,
@@ -35,7 +40,10 @@ import { EventDoneComponent } from './my-events/done/my-events-done/event-done/e
     EventSubscribersComponent,
     PendingEventComponent,
     EveentParticipantsComponent,
-    EventDoneComponent]
+    EventDoneComponent,
+    MenuComponent,
+    EventListPageComponent,
+    FillProfileComponent]
 })
 
 export class LayoutModule {}
