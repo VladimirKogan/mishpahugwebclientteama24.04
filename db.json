@@ -130,6 +130,9 @@
       "confession": "religious",
       "date": "2018-04-07",
       "time": "18:32:00",
+      "address": {
+        "city": "Tel Aviv-Yafo"
+      },
       "food": [
         "kosher",
         "non-vegetarian"
@@ -204,7 +207,27 @@
           "rate": 1.5,
           "isInvited": true
         }
-      ]
+      ],
+      "owner": {
+        "fullName": "Elsa Fishman",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 25,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/23/bf/25/23bf251cab0b742f9257506357e70f38.png",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 4
+      }
     },
     {
       "eventId": 125,
@@ -213,6 +236,9 @@
       "confession": "religious",
       "date": "2018-04-07",
       "time": "18:32:00",
+      "address": {
+        "city": "Tel Aviv-Yafo"
+      },
       "food": [
         "kosher",
         "non-vegetarian"
