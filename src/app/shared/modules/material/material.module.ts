@@ -10,7 +10,11 @@ import {
   MatNativeDateModule,
   MatProgressBarModule,
   MatToolbarModule,
-  MatSelectModule } from '@angular/material';
+  MatSelectModule,
+  MatTabsModule,
+  MatListModule,
+  MatCheckboxModule, MatTooltipModule, MatTooltip
+} from '@angular/material';
 
 
 
@@ -27,7 +31,11 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatTooltipModule
   ],
   exports: [
     MatButtonModule,
@@ -41,7 +49,11 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatTooltip
   ]
 })
 export class MaterialModule {

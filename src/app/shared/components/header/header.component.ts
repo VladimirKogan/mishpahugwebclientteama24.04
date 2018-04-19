@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   toLogin() {
     this.dialog.open(LoginComponent, {
-      minHeight: '70vh',
+      height: '70vh',
       closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
   toRegistrate() {
     this.dialog.open(RegistrationComponent, {
-      minHeight: '75vh',
+      height: '75vh',
       closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
