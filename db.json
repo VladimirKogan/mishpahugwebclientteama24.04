@@ -40,7 +40,8 @@
   "content": [
     {
       "eventId": 123,
-      "title": "Pesah",
+      "title": "Elsa Fishman`s Pesah",
+      "holiday": "Pesah",
       "confession": "Jew",
       "date": "2018-03-30",
       "address": {
@@ -80,7 +81,8 @@
     },
     {
       "eventId": 125,
-      "title": "Shabbat",
+      "title": "Moshe Amos`s Shabbat",
+      "holiday": "Shabat",
       "confession": "Jew",
       "date": "2018-04-07",
       "address": {
@@ -118,5 +120,8 @@
         "rate": 2
       }
     }
-  ]
+  ],
+  "subscription": {
+
+  }
 }

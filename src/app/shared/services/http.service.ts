@@ -42,8 +42,11 @@ export class HttpService {
     return this.http.get('http://localhost:3000/content').map((cards: any) => {
       return cards.map((card) => {
         return new EventListCardModel(card['eventId'],
-          card['title'], card['date'], card['address']['city'],
+          card['title'],
+          card['holiday'], // field for EventInfo
+          card['date'], card['address']['city'],
           card['owner']['fullName'], card['owner']['pictureLink'][0],
+          card['description'], // field for EventInfo
           card['owner']['rate']);
       });
     });

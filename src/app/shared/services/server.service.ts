@@ -75,9 +75,15 @@ export class ServerService {
   getContent(): Observable<EventListCardModel[]> {
     return this.http.get('http://localhost:3000/content').map((cards: any) => {
       return cards.map((card) => {
+        console.log('CARD: ' + card['description']);
         return new EventListCardModel(card['eventId'],
-          card['title'], card['date'], card['address']['city'],
-          card['owner']['fullName'], card['owner']['pictureLink'][1],
+          card['title'],
+          card['holiday'], // field for EventInfo
+          card['date'],
+          card['address']['city'],
+          card['owner']['fullName'],
+          card['owner']['pictureLink'][1],
+          card['description'], // field for EventInfo
           card['owner']['rate']);
       });
     });
@@ -99,5 +105,14 @@ export class ServerService {
       'Authorization': token
     });
     return this.http.post(this.baseUrl + '/profile', value, {headers});
+  }
+
+  subscriveToEvent(id: number) {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders({
+      'Content-type': 'application/json;',
+      'Authorization': token
+    });
+    return this.http.put(this.baseUrl + '/subscription/{' + 123 + '}', {}, {headers});
   }
 }

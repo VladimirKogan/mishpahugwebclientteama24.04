@@ -2,4 +2,16 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import '~ngx-bar-rating/themes/br-stars-theme';
+@import '~ngx-bar-rating/themes/br-fontawesome-o-theme';
 
+
+.mat-dialog-container {
+  padding: 0px !important;
+  border: 5px solid #5f4f8d;
+  background-color: #FFEED9;
+}
+.mat-dialog-container.col-12{
+  color: red;
+  background-color: red !important;
+}
