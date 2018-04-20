@@ -12,6 +12,9 @@ import {
   MatProgressBarModule,
   MatToolbarModule,
   MatSelectModule,
+  MatTabsModule,
+  MatListModule,
+  MatCheckboxModule,
   MatTooltipModule,
   MatPaginatorModule
 } from '@angular/material';
@@ -32,6 +35,9 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatCheckboxModule,
     MatTooltipModule
   ],
   exports: [
@@ -48,6 +54,9 @@ import {
     MatPaginatorModule,
     MatSelectModule,
     MatDialogModule,
+    MatTabsModule,
+    MatListModule,
+    MatCheckboxModule,
     MatTooltipModule
   ]
 })

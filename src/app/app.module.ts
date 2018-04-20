@@ -11,6 +11,7 @@ import {FooterComponent} from './shared/components/footer/footer.component';
 import {ServerService} from './shared/services/server.service';
 import {HttpClientModule} from '@angular/common/http';
 import {DataService} from './shared/services/data.service';
+import {EventsService} from './layout/my-events/events.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {DataService} from './shared/services/data.service';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [ServerService, DataService],
+  providers: [ServerService, DataService, EventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

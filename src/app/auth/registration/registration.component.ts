@@ -94,11 +94,11 @@ export class RegistrationComponent implements OnInit {
     this.dialogRef.close();
     setTimeout(() => {
       const dialogRef1 = this.dialog.open(LoginComponent, {
-        minHeight: '70vh',
-        closeOnNavigation: true,
+        height: '70vh',
+        /*closeOnNavigation: true,
         disableClose: false,
         autoFocus: true,
-        panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+        panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
       });
     }, 500);
 

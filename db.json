@@ -30,12 +30,12 @@
   },
   "profile": {},
   "registration": {
-    "email": "denis@mail.com",
-    "password": "123456"
+    "email": "test@gmail.com",
+    "password": "123qwe"
   },
   "login": {
-    "email": "denis@mail.com",
-    "password": "123456"
+    "email": "test@gmail.com",
+    "password": "12345+6"
   },
   "content": [
     {
@@ -43,6 +43,7 @@
       "title": "Pesah",
       "confession": "Jew",
       "date": "2018-03-30",
+      "time": "18:32:00",
       "address": {
         "city": "Tel Aviv-Yafo",
         "place_id": "ChIJH3w7GaZMHRURkD-WwKJy-8E",
@@ -57,6 +58,51 @@
       ],
       "description": "Celebration of Pesah in classic Jewish tradishions.",
       "status": "In progress",
+      "participants": [
+        {
+          "userId": 10,
+          "fullName": "Moshe Amos",
+          "confession": "religious",
+          "gender": "male",
+          "age": 30,
+          "pictureLink": [
+            "https://i.pinimg.com/originals/9e/83/e3/9e83e32c912925c27f05f86125217f53.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "maritalStatus": "couple",
+          "foodPreferences": [
+            "kosher",
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "English"
+          ],
+          "rate": 2.3,
+          "isInvited": true
+        },
+        {
+          "userId": 18,
+          "fullName": "Maria Grinberg",
+          "confession": "irreligious",
+          "gender": "female",
+          "age": 23,
+          "pictureLink": [
+            "https://i.pinimg.com/736x/c8/4c/d2/c84cd295d4ab34f4666f2e3a31f8a870.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "maritalStatus": "married",
+          "foodPreferences": [
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "Russian"
+          ],
+          "rate": 1.5,
+          "isInvited": false
+        }
+      ],
       "owner": {
         "fullName": "Elsa Fishman",
         "confession": "Jew",
@@ -80,23 +126,173 @@
     },
     {
       "eventId": 125,
-      "title": "Shabbat",
-      "confession": "Jew",
+      "title": "Shabbat evening dinner",
+      "holiday": "Shabbat",
+      "confession": "religious",
       "date": "2018-04-07",
+      "time": "18:32:00",
       "address": {
-        "city": "Tel Aviv-Yafo",
-        "place_id": "ChIJH3w7GaZMHRURkD-WwKJy-8E",
-        "location": {
-          "lat": 32.109333,
-          "lng": 34.855499
-        }
+        "city": "Tel Aviv-Yafo"
       },
-      "kitchen": [
+      "food": [
         "kosher",
         "non-vegetarian"
       ],
-      "description": "Shabbat dinner.",
-      "status": "In progress",
+      "description": "Shabbat dinner in the family circle.",
+      "status": "Pending",
+      "participants": [
+        {
+          "userId": 10,
+          "fullName": "Moshe Amos",
+          "confession": "religious",
+          "gender": "male",
+          "age": 30,
+          "pictureLink": [
+            "https://i.pinimg.com/originals/9e/83/e3/9e83e32c912925c27f05f86125217f53.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "phoneNumber": "0523456783",
+          "maritalStatus": "couple",
+          "foodPreferences": [
+            "kosher",
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "English"
+          ],
+          "rate": 2.3,
+          "isInvited": true
+        },
+        {
+          "userId": 18,
+          "fullName": "Maria Grinberg",
+          "confession": "irreligious",
+          "gender": "female",
+          "age": 23,
+          "pictureLink": [
+            "https://i.pinimg.com/736x/c8/4c/d2/c84cd295d4ab34f4666f2e3a31f8a870.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "phoneNumber": "0523488764",
+          "maritalStatus": "married",
+          "foodPreferences": [
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "Russian"
+          ],
+          "rate": 1.5,
+          "isInvited": true
+        },
+        {
+          "userId": 18,
+          "fullName": "Maria Grinberg",
+          "confession": "irreligious",
+          "gender": "female",
+          "age": 23,
+          "pictureLink": [
+            "https://i.pinimg.com/736x/c8/4c/d2/c84cd295d4ab34f4666f2e3a31f8a870.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "phoneNumber": "0523488764",
+          "maritalStatus": "married",
+          "foodPreferences": [
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "Russian"
+          ],
+          "rate": 1.5,
+          "isInvited": true
+        }
+      ],
+      "owner": {
+        "fullName": "Elsa Fishman",
+        "confession": "Jew",
+        "gender": "male",
+        "age": 25,
+        "pictureLink": [
+          "https://i.pinimg.com/originals/23/bf/25/23bf251cab0b742f9257506357e70f38.png",
+          "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+        ],
+        "maritalStatus": "couple",
+        "foodPreferences": [
+          "kosher",
+          "non-vegetarian"
+        ],
+        "languages": [
+          "Hebrew",
+          "English"
+        ],
+        "rate": 4
+      }
+    },
+    {
+      "eventId": 126,
+      "title": "Shabbat evening dinner",
+      "holiday": "Shabbat",
+      "confession": "religious",
+      "date": "2018-04-07",
+      "time": "18:32:00",
+      "address": {
+        "city": "Tel Aviv-Yafo"
+      },
+      "food": [
+        "kosher",
+        "non-vegetarian"
+      ],
+      "description": "Shabbat dinner in the family circle.",
+      "status": "Pending",
+      "participants": [
+        {
+          "userId": 10,
+          "fullName": "Moshe Amos",
+          "confession": "religious",
+          "gender": "male",
+          "age": 30,
+          "pictureLink": [
+            "https://i.pinimg.com/originals/9e/83/e3/9e83e32c912925c27f05f86125217f53.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "phoneNumber": "0523456783",
+          "maritalStatus": "couple",
+          "foodPreferences": [
+            "kosher",
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "English"
+          ],
+          "rate": 2.3,
+          "isInvited": true
+        },
+        {
+          "userId": 18,
+          "fullName": "Maria Grinberg",
+          "confession": "irreligious",
+          "gender": "female",
+          "age": 23,
+          "pictureLink": [
+            "https://i.pinimg.com/736x/c8/4c/d2/c84cd295d4ab34f4666f2e3a31f8a870.jpg",
+            "https://www.planwallpaper.com/static/images/Blue-Green-beautiful-nature-21891805-1920-1200_jX7pvvz.jpg"
+          ],
+          "phoneNumber": "0523488764",
+          "maritalStatus": "married",
+          "foodPreferences": [
+            "non-vegetarian"
+          ],
+          "languages": [
+            "Hebrew",
+            "Russian"
+          ],
+          "rate": 1.5,
+          "isInvited": true
+        }
+      ],
       "owner": {
         "fullName": "Moshe Amos",
         "confession": "Jew",
@@ -117,6 +313,34 @@
         ],
         "rate": 2
       }
+    }
+  ],
+  "eventsDone": [
+    {
+      "eventId": 123,
+      "title": "Celebration of Pesah ending",
+      "holiday": "Pesah",
+      "confession": "religious",
+      "date": "2018-03-30",
+      "food": [
+        "kosher",
+        "non-vegetarian"
+      ],
+      "description": "Celebration of Pesah in classic Jewish tradishions.",
+      "status": "Done"
+    },
+    {
+      "eventId": 125,
+      "title": "Shabbat evening dinner",
+      "holiday": "Shabbat",
+      "confession": "religious",
+      "date": "2018-04-07",
+      "food": [
+        "kosher",
+        "non-vegetarian"
+      ],
+      "description": "Celebration of Pesah in classic Jewish tradishions.",
+      "status": "Done"
     }
   ]
 }

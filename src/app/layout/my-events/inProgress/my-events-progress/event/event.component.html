@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <div class="row col-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="col-12 col-sm-8 col-md-8 col-lg-9">
+        <mat-card-title><h4><strong>{{event.title}}</strong></h4></mat-card-title>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-3 right">
+        <mat-card-title >
+          <div class="row">
+            <h5>{{event.date}}</h5>
+            <span class="space"></span>
+            <h5>{{event.time}}</h5>
+          </div>
+        </mat-card-title>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content><h5>{{event.description}}</h5></mat-card-content>
+  <mat-card-actions>
+    <span>Subscribed {{event.participants.length}} people</span>
+    <button mat-raised-button color="primary" (click)="showSubscribers()">{{getBtnName()}}</button>
+  </mat-card-actions>
+</mat-card>
+<app-event-subscribers *ngIf="isShownSub" [event]="event"></app-event-subscribers>
+

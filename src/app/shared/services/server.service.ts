@@ -10,7 +10,7 @@ export class ServerService {
   constructor(private http: HttpClient) {
   }
 
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'http://localhost:3000'; // https://mishpahug-backend.herokuapp.com
 
   /*https://c86d1e63-e648-45b8-aa75-8d6df579497c.mock.pstmn.io';*/
 
@@ -75,9 +75,15 @@ export class ServerService {
   getContent(): Observable<EventListCardModel[]> {
     return this.http.get('http://localhost:3000/content').map((cards: any) => {
       return cards.map((card) => {
+        // console.log('CARD: ' + card['description']);
         return new EventListCardModel(card['eventId'],
-          card['title'], card['date'], card['address']['city'],
-          card['owner']['fullName'], card['owner']['pictureLink'][1],
+          card['title'],
+          card['holiday'], // field for EventInfo
+          card['date'],
+          card['address']['city'],
+          card['owner']['fullName'],
+          card['owner']['pictureLink'][1],
+          card['description'], // field for EventInfo
           card['owner']['rate']);
       });
     });
@@ -99,5 +105,62 @@ export class ServerService {
       'Authorization': token
     });
     return this.http.post(this.baseUrl + '/profile', value, {headers});
+  }
+
+
+  subscriveToEvent(id: number) {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders({
+      'Content-type': 'application/json;',
+      'Authorization': token
+    });
+    return this.http.put(this.baseUrl + '/subscription/' + id, {}, {headers});
+  }
+
+  getMyEvents() {
+    /*const token = localStorage.getItem('token');
+    if (token && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+    return this.http.get(this.baseUrl + '/myevents', {headers});
+    }*/
+    return this.http.get(this.baseUrl + '/content');
+  }
+
+  inviteToEvent(eventId, userId, token) {
+    //  const token = localStorage.getItem('token');
+    if (token && eventId && userId && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/invitation/{' + eventId + '}/{' + userId + '}', {headers});
+    }
+  }
+
+  changeEventStatus(eventId, token) {
+    if (token && token !== '' && eventId) {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/pending/{' + eventId + '}', {headers});
+    }
+  }
+
+  getHistory(token) {
+    /*if (token && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/event/historylist', {headers});
+    }*/
+    return this.http.get(this.baseUrl + '/eventsDone');
   }
 }

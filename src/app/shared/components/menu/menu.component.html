@@ -3,10 +3,9 @@
 </button>
 
 <mat-menu #menu="matMenu">
-  <span>
-    <img src="../../../../assets/images/noAvatarBoy.png" height="190" width="190" class="img">
+  <span ><img src="../../../../assets/images/noAvatarBoy.png" height="190" width="190" class="img">
   </span>
-  <button mat-menu-item [routerLink]="'/eventlist'">
+  <button mat-menu-item (click)="goToEvents()">
     <mat-icon>home</mat-icon>
     <span>Events</span>
   </button>
@@ -22,7 +21,7 @@
     <mat-icon>star</mat-icon>
     <span>Participation</span>
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item (click)="goToMyEvents()">
     <mat-icon>group</mat-icon>
     <span>My events</span>
   </button>
