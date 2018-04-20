@@ -18,6 +18,13 @@ export class MenuComponent implements OnInit {
     this.navigate('/wellcome');
   }
 
+  goToMyEvents() {
+    const token = localStorage.getItem('token');
+    if (token && token !== '') {
+      this.navigate('/my-events');
+    }
+  }
+
   navigate (link) {
     setTimeout (() => {
       this.router.navigate([link]);
