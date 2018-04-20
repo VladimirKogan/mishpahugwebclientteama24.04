@@ -4,6 +4,7 @@ import {EventListCardModel} from '../../shared/models/evnt-list-card.model';
 import {ServerService} from '../../shared/services/server.service';
 import {LoginComponent} from '../../auth/login/login.component';
 import {MatDialog} from '@angular/material';
+import {EventInfoComponent} from '../event-info/event-info.component';
 
 
 @Component({
@@ -45,11 +46,18 @@ export class EventListPageComponent implements OnInit {
 
   }
 
-  goToEvent() {
+  goToEvent(event: any) {
     if (localStorage.getItem('token') === null) {
       this.toLogin();
     } else {
-      this.router.navigate(['event']);
+      /*this.router.navigate(['event']);*/
+      this.dialog.open(EventInfoComponent, {
+       /* height: '85vmin',
+        minHeight*/
+        // height: '45vmax',
+        panelClass: ['col-xl-4', 'col-lg-6', 'col-md-8', 'col-sm-12', 'col-12'],
+        data: event
+      });
     }
   }
 
@@ -77,7 +85,7 @@ export class EventListPageComponent implements OnInit {
       closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
-      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']
+      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3', 'col-xl-12', 'myColor']
     });
   }
 }

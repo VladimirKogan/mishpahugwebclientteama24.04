@@ -35,7 +35,7 @@
   },
   "login": {
     "email": "test@gmail.com",
-    "password": "123qwe"
+    "password": "12345+6"
   },
   "content": [
     {
@@ -231,7 +231,7 @@
       }
     },
     {
-      "eventId": 125,
+      "eventId": 126,
       "title": "Shabbat evening dinner",
       "holiday": "Shabbat",
       "confession": "religious",

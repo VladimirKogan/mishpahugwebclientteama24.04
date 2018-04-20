@@ -30,4 +30,8 @@ export class MenuComponent implements OnInit {
       this.router.navigate([link]);
     }, 500);
   }
+
+  goToEvents() {
+    this.navigate('/eventlist');
+  }
 }

@@ -23,13 +23,21 @@ export class HeaderComponent implements OnInit {
   }
   toLogin() {
     this.dialog.open(LoginComponent, {
-      height: '70vh',
+      height: '70vh'
+      /*closeOnNavigation: true,
+      disableClose: false,
+      autoFocus: true,
+      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 
   toRegistrate() {
     this.dialog.open(RegistrationComponent, {
-      height: '75vh',
+      height: '75vh'
+      /*closeOnNavigation: true,
+      disableClose: false,
+      autoFocus: true,
+      panelClass: ['col-12', 'col-sm-12', 'col-md-5', 'col-lg-3']*/
     });
   }
 }
