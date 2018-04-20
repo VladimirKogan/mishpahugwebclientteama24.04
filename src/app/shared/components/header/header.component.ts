@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material';
+import {Router} from '@angular/router';
 import {LoginComponent} from '../../../auth/login/login.component';
 import {RegistrationComponent} from '../../../auth/registration/registration.component';
 
@@ -9,7 +10,9 @@ import {RegistrationComponent} from '../../../auth/registration/registration.com
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog,
+              private router: Router) {
+  }
 
   ngOnInit() {
   }
@@ -21,6 +24,13 @@ export class HeaderComponent implements OnInit {
       return false;
     }
   }
+
+  goToMainPage() {
+    setTimeout(() => {
+      this.router.navigate(['/eventlist']);
+    }, 500);
+  }
+
   toLogin() {
     this.dialog.open(LoginComponent, {
       height: '70vh'

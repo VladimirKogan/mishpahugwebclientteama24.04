@@ -15,7 +15,7 @@
 
     <span *ngIf="showIcon()"><app-menu></app-menu></span>
 
-    <a mat-button routerLink="./">
+    <a mat-button (click)="goToMainPage()">
       <mat-icon>home</mat-icon>
       <span class="mat-button-wrapper">Home</span>
     </a>
