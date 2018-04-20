@@ -107,6 +107,7 @@ export class ServerService {
     return this.http.post(this.baseUrl + '/profile', value, {headers});
   }
 
+
   subscriveToEvent(id: number) {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({
@@ -114,5 +115,52 @@ export class ServerService {
       'Authorization': token
     });
     return this.http.put(this.baseUrl + '/subscription/' + id, {}, {headers});
+  }
+
+  getMyEvents() {
+    /*const token = localStorage.getItem('token');
+    if (token && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+    return this.http.get(this.baseUrl + '/myevents', {headers});
+    }*/
+    return this.http.get(this.baseUrl + '/content');
+  }
+
+  inviteToEvent(eventId, userId, token) {
+    //  const token = localStorage.getItem('token');
+    if (token && eventId && userId && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/invitation/{' + eventId + '}/{' + userId + '}', {headers});
+    }
+  }
+
+  changeEventStatus(eventId, token) {
+    if (token && token !== '' && eventId) {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/pending/{' + eventId + '}', {headers});
+    }
+  }
+
+  getHistory(token) {
+    /*if (token && token !== '') {
+      const headers = new HttpHeaders({
+        'Content-type': 'application/json;',
+        'Authorization': token
+      });
+      return this.http.put(this.baseUrl +
+        '/event/historylist', {headers});
+    }*/
+    return this.http.get(this.baseUrl + '/eventsDone');
   }
 }

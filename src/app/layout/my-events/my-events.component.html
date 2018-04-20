@@ -1,0 +1,7 @@
+<mat-tab-group>
+  <mat-tab *ngFor="let status of statuses" label={{status}}>
+    <app-my-events-progress *ngIf="status==statuses[0]"></app-my-events-progress>
+    <app-my-events-pending *ngIf="status==statuses[1]"></app-my-events-pending>
+    <app-my-events-done *ngIf="status==statuses[2]"></app-my-events-done>
+  </mat-tab>
+</mat-tab-group>

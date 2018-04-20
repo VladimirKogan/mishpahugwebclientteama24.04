@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
   toLogin() {
     this.dialog.open(LoginComponent, {
-      height: '70vh',
+      height: '70vh'
       /*closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
 
   toRegistrate() {
     this.dialog.open(RegistrationComponent, {
-      height: '75vh',
+      height: '75vh'
       /*closeOnNavigation: true,
       disableClose: false,
       autoFocus: true,
