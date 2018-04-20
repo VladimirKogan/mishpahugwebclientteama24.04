@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  showMenu() {
+  showIcon() {
     if (localStorage.length !== 0) {
       return true;
     } else {
