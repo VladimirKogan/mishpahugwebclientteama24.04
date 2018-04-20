@@ -1,0 +1,48 @@
+<div class="container-fluid row cont">
+  <div class="col-0 col-sm-0 col-md-1 col-lg-1"></div>
+  <div class="col-12 col-sm-12 col-md-5 col-lg-4">
+    <div class="d-flex flex-row justify-content-end">
+    <div class="col-0 col-sm-0 col-md-0 col-lg-2"></div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-10 paddingR paddingL" >
+    <mat-list>
+      <h4 class="center">Subscribers</h4>
+      <div class="list" [ngClass]="isHigh">
+        <mat-list-item *ngFor="let sub of event.participants" class="listItem" [ngClass]="{'invited': sub.isInvited}">
+          <p mat-line (click)="showDetails(sub)" class="col-12 col-sm-12 d-flex flex-row">
+            <img matListAvatar src={{getPicture(sub)}} alt="ava">
+            <span class="name">{{sub.fullName}}</span>
+            <span class="fill-space"></span>
+            <button matTooltip="Invite me!" matTooltipPosition="before" matTooltipClass="toolLip" mat-mini-fab color="primary" (click)="invite(sub)" *ngIf="!sub.isInvited"><mat-icon>add</mat-icon></button>
+            <span class="invited" *ngIf="sub.isInvited"><mat-icon>done</mat-icon></span>
+          </p>
+        </mat-list-item>
+      </div>
+    </mat-list>
+    </div>
+    </div>
+    <div class="d-flex flex-row justify-content-end">
+      <button mat-raised-button color="primary" class="button" (click)="finishInvite()">Finish invite</button>
+    </div>
+  </div>
+
+  <div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+  <div class="col-11 col-sm-11 col-md-5 col-lg-4 row d-flex flex-row details" *ngIf="isDetailed">
+    <button (click)="closeDetailes()" mat-mini-fab class="closeBtn"><mat-icon>close</mat-icon></button>
+    <div class="col-12 col-sm-6 d-flex flex-column justify-content-center center">
+      <div class="center">
+      <img class="img" src={{pictureLink}} alt="avatar">
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+      <bar-rating [(rate)]="rate" [max]="5" [theme]="'default'" [readOnly]="true">
+      </bar-rating>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 d-flex flex-column justify-content-center center">
+      <h5><strong>{{fullName}}</strong></h5>
+      <p>{{confession}}</p>
+      <p>{{gender}}</p>
+      <p>{{isMarried}}</p>
+      <p>{{food}}</p>
+    </div>
+  </div>
+</div>
