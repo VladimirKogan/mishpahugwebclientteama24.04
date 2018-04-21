@@ -3,12 +3,8 @@
 </button>
 
 <mat-menu #menu="matMenu">
-  <button ><img src="../../../../assets/images/noAvatarBoy.png" height="190" width="190" class="img">
-  </button>
-  <button mat-menu-item>
-    <mat-icon>person</mat-icon>
-    <span>Profile</span>
-  </button>
+  <span ><img src="../../../../assets/images/noAvatarBoy.png" height="190" width="190" class="img">
+  </span>
   <button mat-menu-item (click)="goToEvents()">
     <mat-icon>home</mat-icon>
     <span>Events</span>
@@ -30,6 +26,10 @@
     <span>My events</span>
   </button>
   <hr>
+  <button mat-menu-item>
+    <mat-icon>person</mat-icon>
+    <span>Profile</span>
+  </button>
   <button mat-menu-item (click)="logOut()">
     <mat-icon>exit_to_app</mat-icon>
     <span>Log out</span>

@@ -1,6 +1,8 @@
+<div id="pictureTable">
+
 <div class="container">
   <div class="row align-item-center">
-    <div class="col-2"><img src="../../../assets/images/Logo.png" class="img-1"></div>
+    <div class="col-2"><img src="../../../assets/images/Logo.png"></div>
     <div class="col-lg-8 col-lg-5 ">
       <br>
       <h1 class="classCentr"> Registration</h1>
@@ -112,12 +114,15 @@
       <div class="col-sm-11 col-lg-4">
         <div class="classCentr">
 
-          <button type="button"><img src="../../../assets/images/avatar-male.png" class="img">
+          <button class="picture" [routerLink]="'/changepicture'">
+            <img src={{picture}} height="120" width="120" class="img-responsive"
+                 >
           </button>
         </div>
 
 
-        <!--<input math-input type="file" placeholder="change picture" id="pictureInput" formControlName="pictureLink">-->
+        <!--<input math-input type="file" placeholder="change picture" id="pictureInput"
+        formControlName="pictureLink">-->
 
         <h3 class="classCentr">Change picture</h3>
 
@@ -147,7 +152,9 @@
     </div>
     <div class="positionbtn">
       <div *ngIf="[hasError]" class="error col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">{{errorField}}</div>
-      <button mat-button type="submit" class="btn_save" [disabled]="registerForm.invalid">Save</button>
+      <button type="submit" mat-raised-button color="primary" [disabled]="registerForm.invalid">Save</button>
     </div>
   </form>
+</div>
+
 </div>

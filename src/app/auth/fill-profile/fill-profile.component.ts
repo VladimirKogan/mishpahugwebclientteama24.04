@@ -13,6 +13,7 @@ import {DataService} from '../../shared/services/data.service';
 })
 export class FillProfileComponent implements OnInit {
 
+
   registerForm: FormGroup;
   staticFields = {
     'confession': [], // select
@@ -23,7 +24,7 @@ export class FillProfileComponent implements OnInit {
   };
   hasError = false;
   errorField = '';
-  pictureValue = '';
+  picture = '';
 
   constructor(private server: ServerService, private data: DataService, private router: Router, private dialog: MatDialog) {
   }
@@ -64,6 +65,8 @@ export class FillProfileComponent implements OnInit {
       'languages': new FormControl('', [Validators.required]), // select
       'description': new FormControl('', [Validators.required])
     });
+
+    this.picture = this.data.getPicture();
   }
 
   checkNumbers(control: FormControl) {

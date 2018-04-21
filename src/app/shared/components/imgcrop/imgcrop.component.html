@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+  <input id="custom-input" type="file" (change)="fileChangeListener($event)">
+</div>
+
+<div class="row justify-content-center">
+  <img-cropper #cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+</div>
+
+<div class="row justify-content-center">
+  <span class="result rounded" *ngIf="data.image">
+    <img id="borderRadius"[src]="data.image" [width]="cropperSettings.croppedWidth"
+                            [height]="cropperSettings.croppedHeight">
+  </span>
+</div>
+
+<div class="row justify-content-center">
+  <button mat-raised-button color="primary"
+          [disabled]="!toggle"
+          (click)="upload()">upload
+  </button>
+</div>

@@ -1,5 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {ImageCropperComponent} from 'ngx-img-cropper';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material';
+
 import {LayoutComponent} from './layout.component';
 import {LayoutRoutingModule} from './layout-routing.module';
 import {WellcomePageComponent} from './wellcome-page/wellcome-page.component';
@@ -17,9 +21,9 @@ import { EventDoneComponent } from './my-events/done/my-events-done/event-done/e
 import {MenuComponent} from '../shared/components/menu/menu.component';
 import {EventListPageComponent} from './event-list-page/event-list-page.component';
 import {FillProfileComponent} from '../auth/fill-profile/fill-profile.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ChangePictureComponent } from './change-picture/change-picture.component';
+import {ImgcropComponent} from '../shared/components/imgcrop/imgcrop.component';
 import {EventInfoComponent} from './event-info/event-info.component';
-import {MatDialogModule} from '@angular/material';
 import {BarRatingModule} from 'ngx-bar-rating';
 
 @NgModule({
@@ -47,6 +51,9 @@ import {BarRatingModule} from 'ngx-bar-rating';
     MenuComponent,
     EventListPageComponent,
     FillProfileComponent,
+    ChangePictureComponent,
+    ImgcropComponent,
+    ImageCropperComponent,
     EventInfoComponent
   ],
   entryComponents: [EventInfoComponent]
